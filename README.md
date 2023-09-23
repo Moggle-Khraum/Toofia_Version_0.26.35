@@ -1,15 +1,15 @@
 # Toofia_Version_0.26.35
-:wrench: :gear: **The main repo for the game, written in GDScript**
+:gear: **The main repo for the game, written in GDScript**
 
 :writing_hand: ***Tags: educational games, preschoolers, 2D, GDScript***
 
-**Game Title:** *Toofia: Kasangkapang Tulong Pang-edukasyon*
+:label: **Game Title:** *Toofia: Kasangkapang Tulong Pang-edukasyon*
 
-**Language Used:** *Pure GDScript*
+:desktop_computer: **Language Used:** *Pure GDScript*
 
-**Progress:** *45% out of 100%*
+:hourglass_flowing_sand: **Progress:** *45% out of 100%*
 
-**Completed Goal:**
+:dart: **Completed Goal:**
 - [x] Add a Persistent Music system that persists even when restarting the game.
 - [x] Added Name Input and store it locally
 - [x] Added 1 Level with Two Questions
@@ -19,8 +19,8 @@
 - [  ]
 - [  ]
 - [  ]
-- 
-**Next Goal:**
+  
+:pushpin: **Next Goal:**
 - [  ] Add a system logic that makes the star display 1, 2 or 3 stars based on the players choice
 - [  ] Implement this system to other levels :face_with_spiral_eyes:
 - [  ] Add more questions to Levels :dizzy_face:
@@ -30,7 +30,7 @@
 
  
 
-**Download the Source File**
+:package: **Download the Source File**
 - Download [Here](https://github.com/Moggle-Khraum/Toofia_Version_0.26.35/archive/refs/heads/main.zip)
 
 
