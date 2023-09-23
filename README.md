@@ -34,14 +34,14 @@
 
 <p align="left">
     <b> The game's Toofia icon:</b><br>
+    <br>
     <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon"> 
     <br>
-    
- <p align="center">
-  <br>
+    <br>
     <b> Made with Godot Engine</b><br>
+    <br>
     <img width="200" src="Assets/Images/logo_godot.png" alt="Godot Engine Logo" title="Godot Engine">
-
+    <br>
 </p>
 
     
