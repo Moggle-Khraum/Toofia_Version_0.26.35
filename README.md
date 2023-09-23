@@ -31,7 +31,7 @@
  
 
 :package: **Download the Source File**
-- Download [Here](https://github.com/Moggle-Khraum/Toofia_Version_0.26.35/archive/refs/heads/main.zip) <br>
+- :arrow_right: Download [Here](https://github.com/Moggle-Khraum/Toofia_Version_0.26.35/archive/refs/heads/main.zip) <br>
 <br>
 
 :raising_hand_man::grey_question: **About the Game**<br>
