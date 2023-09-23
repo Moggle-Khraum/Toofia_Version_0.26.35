@@ -5,7 +5,7 @@
 
 **Language Used:** *Pure GDScript*
 
-**Progress:** *40% out of 100%*
+**Progress:** *45% out of 100%*
 
 **Completed Goal:**
 - [✓] Add a Persistent Music system that persists even when restarting the game.
@@ -28,12 +28,12 @@
 
  
 
-**Download the prototype (Desktop Only)**
-- The link of the download is [here]()
+**Download the Source File**
+- Download [Here](https://github.com/Moggle-Khraum/Toofia_Version_0.26.35/archive/refs/heads/main.zip)
 
 
 <p align="center">
     <b> The game's Toofia icon:</b><br>
     <br>
-    <img width="200" src="Toofiav7/Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon">
+    <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon">
 </p>
