@@ -32,8 +32,8 @@
 - Download [Here](https://github.com/Moggle-Khraum/Toofia_Version_0.26.35/archive/refs/heads/main.zip)
 
 
-<p align="left">
-    <b> The game's Toofia icon:</b> &emsp; &emsp; &emsp; &emsp; <b>Made with Godot Engine</b><br>
+<p align="center">
+    <b> The game's Toofia icon:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <b>Made with Godot Engine</b><br>
     <br>
     <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon"> 
     <br>
