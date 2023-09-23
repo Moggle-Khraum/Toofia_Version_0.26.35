@@ -1,5 +1,5 @@
 # Toofia_Version_0.26.35
-:gear: **The main repo for the game, written in GDScript and made in [GodotEngine](https://godotengine.org/)**
+:gear: **The main repo for the game, written in GDScript and made in [Godot Engine](https://godotengine.org/)**
 
 :writing_hand: ***Tags: educational games, preschoolers, 2D, GDScript***
 
