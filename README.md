@@ -33,10 +33,8 @@
 
 
 <p align="center">
-    <b> The game's Toofia icon:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <b>Made with Godot Engine</b><br>
-    <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon"> 
-    <br>
-    <img width="200" src="Assets/Images/logo_godot.png" alt="Godot Engine Logo" title="Godot Engine">
+    <b> The game's Toofia icon:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <b> Made with Godot Engine</b><br>
+    <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon"> &emsp; &emsp; &emsp; <img width="200" src="Assets/Images/logo_godot.png" alt="Godot Engine Logo" title="Godot Engine">
     <br>
 </p>
 
