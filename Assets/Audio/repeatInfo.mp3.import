@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/repeatInfo.mp3-bb0f22df1b47780403f775bf8a542b97.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/repeatInfo.mp3"
+dest_files=[ "res://.import/repeatInfo.mp3-bb0f22df1b47780403f775bf8a542b97.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

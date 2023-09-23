@@ -1,0 +1,682 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/GUI/Icon_X.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Home.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BoxesBanners/Banner_Orange.png" type="Texture" id=6]
+[ext_resource path="res://Assets/ButtonsIcons/IconButton_Small_Red_Circle.png" type="Texture" id=7]
+[ext_resource path="res://Assets/BoxesBanners/Box_Orange_Rounded.png" type="Texture" id=8]
+[ext_resource path="res://Assets/UIElements/Icon_Menu.png" type="Texture" id=9]
+[ext_resource path="res://Levels/PagguhitNgAlpabeto/Level1/1stQuestion/PausePanel0.gd" type="Script" id=10]
+[ext_resource path="res://Levels/PagguhitNgAlpabeto/PagguhitNgAlpabeto.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/UIElements/Icon_Return.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 21
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 23
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 23
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 23
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 23
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 26
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 26
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 26
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 27
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 26
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 26
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 3 )
+
+[node name="Popup" type="Popup"]
+self_modulate = Color( 1, 1, 1, 0.45098 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 0.501961 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="box" type="TextureRect" parent="bg"]
+anchor_left = 0.260742
+anchor_top = 0.145
+anchor_right = 0.759766
+anchor_bottom = 0.835
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="babala" type="Label" parent="bg/box"]
+anchor_left = 0.0254403
+anchor_top = 0.169082
+anchor_right = 0.966732
+anchor_bottom = 0.442029
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 1 )
+text = "Babala: Hindi maitatala ng
+laro ang iyung progreso
+kapag hindi mo natapos
+ang mga tanong."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="bg/box/babala"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="theLevels" type="Label" parent="bg/box"]
+anchor_left = 0.0978476
+anchor_top = 0.492754
+anchor_right = 0.358122
+anchor_bottom = 0.65459
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 5 )
+text = "Mga Levels"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="bg/box/theLevels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 4 )
+text = "mga levels"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="theTopics" type="Label" parent="bg/box"]
+anchor_left = 0.651663
+anchor_top = 0.487923
+anchor_right = 0.911937
+anchor_bottom = 0.649759
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 5 )
+text = "Mga paksa"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="topicsLabel" type="Label" parent="bg/box/theTopics"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 4 )
+text = "mga paksa"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="theHome" type="Label" parent="bg/box"]
+anchor_left = 0.373777
+anchor_top = 0.5
+anchor_right = 0.634051
+anchor_bottom = 0.649758
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 6 )
+text = "Main Menu"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="homeLabel" type="Label" parent="bg/box/theHome"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 7 )
+text = "MAin menu"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pausePanel" type="HBoxContainer" parent="bg/box"]
+anchor_left = 0.103718
+anchor_top = 0.65942
+anchor_right = 0.896281
+anchor_bottom = 0.939614
+custom_constants/separation = 30
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="goLevels" type="TextureRect" parent="bg/box/pausePanel"]
+margin_right = 115.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 115, 116 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="levels" type="Button" parent="bg/box/pausePanel/goLevels"]
+anchor_left = 0.18261
+anchor_top = 0.189656
+anchor_right = 0.817393
+anchor_bottom = 0.784484
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="goMainMenu" type="TextureRect" parent="bg/box/pausePanel"]
+margin_left = 145.0
+margin_right = 260.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 115, 116 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="home" type="Button" parent="bg/box/pausePanel/goMainMenu"]
+anchor_left = 0.130435
+anchor_top = 0.146552
+anchor_right = 0.878261
+anchor_bottom = 0.810345
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="goTopics" type="TextureRect" parent="bg/box/pausePanel"]
+margin_left = 290.0
+margin_right = 405.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 115, 116 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="topics" type="Button" parent="bg/box/pausePanel/goTopics"]
+anchor_left = 0.156522
+anchor_top = 0.215517
+anchor_right = 0.791305
+anchor_bottom = 0.810345
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 12 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="banner" type="TextureRect" parent="bg"]
+anchor_left = 0.336914
+anchor_top = 0.0566667
+anchor_right = 0.682617
+anchor_bottom = 0.25
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="topText" type="Control" parent="bg/banner"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -13.0
+margin_top = -6.0
+margin_right = -13.0
+margin_bottom = -31.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pansaLabel" type="Label" parent="bg/banner/topText"]
+anchor_left = 0.039548
+anchor_top = 0.290698
+anchor_right = 0.47995
+anchor_bottom = 0.655886
+margin_right = -5.90213
+margin_bottom = 17.6382
+rect_rotation = -6.6
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "pansa"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pansaLabel" type="Label" parent="bg/banner/topText/pansaLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "pansa
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mantLabel" type="Label" parent="bg/banner/topText"]
+anchor_left = 0.40678
+anchor_top = 0.116279
+anchor_right = 0.703113
+anchor_bottom = 0.480951
+margin_right = -5.90213
+margin_bottom = 17.6382
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 10 )
+text = "mant"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="mantlLabel" type="Label" parent="bg/banner/topText/mantLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 11 )
+text = "mant"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="alangLabel" type="Label" parent="bg/banner/topText"]
+anchor_left = 0.672316
+anchor_top = 0.116279
+anchor_right = 1.01102
+anchor_bottom = 0.480951
+margin_right = -5.90213
+margin_bottom = 17.6382
+rect_rotation = 6.6
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 12 )
+text = "alang"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="alangLabel" type="Label" parent="bg/banner/topText/alangLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 13 )
+text = "alang"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="underText" type="Control" parent="bg/banner"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = 26.0
+margin_right = -12.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pagtLabel" type="Label" parent="bg/banner/underText"]
+anchor_left = 0.29661
+anchor_top = 0.175824
+anchor_right = 0.590119
+anchor_bottom = 0.542437
+margin_right = -5.90213
+margin_bottom = 17.6382
+rect_rotation = -3.0
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "pagt"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pagtLabel" type="Label" parent="bg/banner/underText/pagtLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "pagt
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="igilLabel" type="Label" parent="bg/banner/underText"]
+anchor_left = 0.559322
+anchor_top = 0.197802
+anchor_right = 0.75014
+anchor_bottom = 0.661566
+margin_right = 2.45041
+margin_bottom = -4.20252
+rect_rotation = 3.5
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 10 )
+text = "igil"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="igilLabel" type="Label" parent="bg/banner/underText/igilLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 11 )
+text = "igil
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="x" type="Button" parent="bg"]
+anchor_left = 0.69043
+anchor_top = 0.101667
+anchor_right = 0.788086
+anchor_bottom = 0.251667
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit" type="TextureRect" parent="bg/x"]
+anchor_left = 0.27
+anchor_top = 0.222222
+anchor_right = 0.75
+anchor_bottom = 0.755556
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="PagguhitNgAlpabeto" parent="." instance=ExtResource( 11 )]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="bg/box/pausePanel/goLevels/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="bg/box/pausePanel/goMainMenu/home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="bg/box/pausePanel/goTopics/topics" to="." method="_on_topics_pressed"]
+[connection signal="pressed" from="bg/x" to="." method="_on_x_pressed"]

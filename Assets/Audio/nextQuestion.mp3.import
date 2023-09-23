@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nextQuestion.mp3-c47ec4904f3de382eba1fc3ada12d034.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/nextQuestion.mp3"
+dest_files=[ "res://.import/nextQuestion.mp3-c47ec4904f3de382eba1fc3ada12d034.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

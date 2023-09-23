@@ -1,0 +1,596 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/PopupEnterName.gd" type="Script" id=3]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/Background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Fonts/therok_regular.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Assets/UIElements/Icon_Pencil.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/Icon_LongSquare.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UIElements/Icon_SqiuareTilt.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 130
+outline_size = 6
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 35
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 25
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 25
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 25
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 25
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 25
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 130
+outline_size = 5
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 130
+outline_size = 2
+outline_color = Color( 0.878431, 0.639216, 0.352941, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 52
+outline_size = 3
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 52
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 52
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+outline_size = 1
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 482, 50 )
+
+[sub_resource type="DynamicFont" id=24]
+resource_local_to_scene = true
+size = 20
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 33
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 33
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 2 )
+
+[node name="NamePopup" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Panel2" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GameIcon" type="Panel" parent="Panel2"]
+anchor_left = 0.0234375
+anchor_top = 0.036674
+anchor_right = 0.169922
+anchor_bottom = 0.269573
+custom_styles/panel = SubResource( 12 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Panel2/GameIcon"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 7 )
+text = "Game Icon"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TitleLabel2" type="Label" parent="Panel2"]
+anchor_left = 0.0126953
+anchor_top = -0.00500101
+anchor_right = 0.973633
+anchor_bottom = 0.291416
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 12
+custom_fonts/font = SubResource( 9 )
+text = "Toofia"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="SchoolLogo" type="Panel" parent="Panel2"]
+anchor_left = 0.830078
+anchor_top = 0.036674
+anchor_right = 0.976563
+anchor_bottom = 0.271202
+custom_styles/panel = SubResource( 13 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="schoolLabel" type="Label" parent="Panel2/SchoolLogo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 14 )
+text = "school
+logo"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="play2" type="Label" parent="Panel2"]
+anchor_left = 0.427734
+anchor_top = 0.826833
+anchor_right = 0.578125
+anchor_bottom = 0.885465
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 15 )
+text = "maglaro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="play" type="Label" parent="Panel2"]
+anchor_left = 0.420898
+anchor_top = 0.825166
+anchor_right = 0.584961
+anchor_bottom = 0.882169
+margin_top = -3.05176e-05
+margin_bottom = -6.10352e-05
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 16 )
+text = "maglaro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="play0" type="Label" parent="Panel2/play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 17 )
+text = "maglaro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit2" type="Label" parent="Panel2"]
+anchor_left = 0.640625
+anchor_top = 0.791826
+anchor_right = 0.759766
+anchor_bottom = 0.845572
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 18 )
+text = "umalis"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit" type="Label" parent="Panel2"]
+anchor_left = 0.641602
+anchor_top = 0.788492
+anchor_right = 0.758789
+anchor_bottom = 0.840609
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 19 )
+text = "umalis"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit0" type="Label" parent="Panel2/exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 20 )
+text = "umalis"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel" type="Label" parent="Panel2"]
+anchor_left = 0.0136719
+anchor_top = -0.010002
+anchor_right = 0.969727
+anchor_bottom = 0.286415
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 12
+custom_fonts/font = SubResource( 10 )
+text = "Toofia"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel2" type="Label" parent="Panel2/TitleLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 12
+custom_fonts/font = SubResource( 11 )
+text = "Toofia"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bgGray" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.694118 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="NinePatchRect" parent="."]
+anchor_left = 0.143555
+anchor_top = 0.125
+anchor_right = 0.842773
+anchor_bottom = 0.843333
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nameWhite" type="Label" parent="Panel"]
+anchor_left = 0.0195526
+anchor_top = 0.074246
+anchor_right = 0.979051
+anchor_bottom = 0.37819
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 21 )
+text = "isulat ang iyong pangalan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="nameLabel" type="Label" parent="Panel"]
+anchor_left = 0.0195526
+anchor_top = 0.0696056
+anchor_right = 0.979051
+anchor_bottom = 0.37355
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 22 )
+text = "isulat ang iyong pangalan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="namelabel" type="Label" parent="Panel/nameLabel"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 23 )
+text = "isulat ang iyong pangalan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+anchor_left = 0.0670387
+anchor_top = 0.422274
+anchor_right = 0.944134
+anchor_bottom = 0.664088
+custom_colors/cursor_color = Color( 0.027451, 0.286275, 0.733333, 1 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+align = 1
+max_length = 20
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+placeholder_text = "Dito isulat ang pangalan"
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="writeCage" type="Control" parent="Panel"]
+anchor_left = 0.23743
+anchor_top = 0.712297
+anchor_right = 0.777934
+anchor_bottom = 0.948956
+margin_right = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="EnterButton" type="Button" parent="Panel/writeCage"]
+anchor_left = 0.130574
+anchor_top = 0.1875
+anchor_right = 1.0
+anchor_bottom = 0.8125
+custom_fonts/font = SubResource( 24 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pressWrite" type="TextureRect" parent="Panel/writeCage/EnterButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -65.7736
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="writeLabel" type="Label" parent="Panel/writeCage/EnterButton"]
+anchor_left = 0.161697
+anchor_top = 0.0181818
+anchor_right = 0.777976
+anchor_bottom = 0.909091
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 25 )
+text = "itala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="writeLabel" type="Label" parent="Panel/writeCage/EnterButton/writeLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -5.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 26 )
+text = "Itala
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="writeIcon" type="TextureRect" parent="Panel/writeCage"]
+anchor_left = 0.0764331
+anchor_top = 0.0125
+anchor_right = 0.324841
+anchor_bottom = 0.9875
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="penIcon" type="TextureRect" parent="Panel/writeCage/writeIcon"]
+anchor_left = 0.294872
+anchor_top = 0.294872
+anchor_right = 0.717949
+anchor_bottom = 0.679487
+texture = ExtResource( 8 )
+expand = true
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="Panel/writeCage/EnterButton" to="." method="_on_EnterButton_pressed"]

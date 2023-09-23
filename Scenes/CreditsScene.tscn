@@ -1,0 +1,499 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/CreditsScripts.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/Icon_LongSquare.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UIElements/Icon_Write.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UIElements/Icon_Return.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UIElements/Icon_SqiuareTilt.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/Icon_LongSquareWhite.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UIElements/Icon_Award.png" type="Texture" id=10]
+
+[sub_resource type="Theme" id=8]
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 20
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 23
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 23
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 22
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 22
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 30
+outline_size = 1
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[node name="CreditsPopup" type="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BGPanel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.435294 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FGPanel" type="Panel" parent="BGPanel"]
+anchor_left = 0.262695
+anchor_top = 0.135
+anchor_right = 0.706055
+anchor_bottom = 0.868333
+theme = SubResource( 8 )
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="guideCage" type="Control" parent="BGPanel/FGPanel"]
+anchor_left = 0.0616746
+anchor_top = 0.277273
+anchor_right = 0.852422
+anchor_bottom = 0.481818
+margin_right = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ShowTutorialsBtn" type="Button" parent="BGPanel/FGPanel/guideCage"]
+anchor_left = 0.130574
+anchor_top = 0.1875
+anchor_right = 1.0
+anchor_bottom = 0.8125
+custom_fonts/font = SubResource( 4 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="guide" type="TextureRect" parent="BGPanel/FGPanel/guideCage/ShowTutorialsBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="guideBtnLabel" type="Label" parent="BGPanel/FGPanel/guideCage/ShowTutorialsBtn"]
+visible = false
+anchor_left = 0.223647
+anchor_top = 0.0177778
+anchor_right = 0.974461
+anchor_bottom = 0.888889
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 6
+custom_fonts/font = SubResource( 5 )
+text = "Mga Gabay
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="guideLabel" type="Label" parent="BGPanel/FGPanel/guideCage/ShowTutorialsBtn"]
+anchor_left = 0.230037
+anchor_top = 0.0177778
+anchor_right = 0.958486
+anchor_bottom = 0.906667
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 14 )
+text = "mga gabay"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="guideLabel" type="Label" parent="BGPanel/FGPanel/guideCage/ShowTutorialsBtn/guideLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 15 )
+text = "mga gabay"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="guideIcon" type="TextureRect" parent="BGPanel/FGPanel/guideCage"]
+anchor_left = 0.0764331
+anchor_top = 0.0125
+anchor_right = 0.324841
+anchor_bottom = 0.9875
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="padIcon" type="TextureRect" parent="BGPanel/FGPanel/guideCage/guideIcon"]
+anchor_left = 0.294872
+anchor_top = 0.294872
+anchor_right = 0.717949
+anchor_bottom = 0.679487
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="creditCage" type="Control" parent="BGPanel/FGPanel"]
+anchor_left = 0.0616746
+anchor_top = 0.490909
+anchor_right = 0.854625
+anchor_bottom = 0.695455
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ShowCreditsBtn" type="TextureButton" parent="BGPanel/FGPanel/creditCage"]
+anchor_left = 0.130574
+anchor_top = 0.1875
+anchor_right = 1.0
+anchor_bottom = 0.8125
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="credits" type="TextureRect" parent="BGPanel/FGPanel/creditCage/ShowCreditsBtn"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="creditsLabel" type="Label" parent="BGPanel/FGPanel/creditCage/ShowCreditsBtn"]
+anchor_left = 0.207672
+anchor_top = 0.0177778
+anchor_right = 0.977656
+anchor_bottom = 0.906666
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 16 )
+text = "mga pagkilala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="creditsLabel" type="Label" parent="BGPanel/FGPanel/creditCage/ShowCreditsBtn/creditsLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 17 )
+text = "mga pagkilala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="creditIcon" type="TextureRect" parent="BGPanel/FGPanel/creditCage"]
+anchor_left = 0.0764331
+anchor_top = 0.0125
+anchor_right = 0.324841
+anchor_bottom = 0.9875
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="medalIcon" type="TextureRect" parent="BGPanel/FGPanel/creditCage/creditIcon"]
+anchor_left = 0.269231
+anchor_top = 0.307692
+anchor_right = 0.717949
+anchor_bottom = 0.782051
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exitCage" type="Control" parent="BGPanel/FGPanel"]
+anchor_left = 0.0638772
+anchor_top = 0.720455
+anchor_right = 0.856828
+anchor_bottom = 0.925
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="BackButton" type="Button" parent="BGPanel/FGPanel/exitCage"]
+anchor_left = 0.130574
+anchor_top = 0.1875
+anchor_right = 1.0
+anchor_bottom = 0.8125
+custom_fonts/font = SubResource( 4 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="back" type="TextureRect" parent="BGPanel/FGPanel/exitCage/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="backLabel" type="Label" parent="BGPanel/FGPanel/exitCage/BackButton"]
+anchor_left = 0.230037
+anchor_top = 0.0177778
+anchor_right = 0.958486
+anchor_bottom = 0.906667
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 14 )
+text = "umalis dito"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="homeLabel" type="Label" parent="BGPanel/FGPanel/exitCage/BackButton/backLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 15 )
+text = "umalis dito"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="backIcon" type="TextureRect" parent="BGPanel/FGPanel/exitCage"]
+anchor_left = 0.0764331
+anchor_top = 0.0125
+anchor_right = 0.324841
+anchor_bottom = 0.9875
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="returnIcon" type="TextureRect" parent="BGPanel/FGPanel/exitCage/backIcon"]
+anchor_left = 0.268376
+anchor_top = 0.273504
+anchor_right = 0.71567
+anchor_bottom = 0.729345
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Control" type="Control" parent="BGPanel"]
+anchor_left = 0.299805
+anchor_top = 0.193333
+anchor_right = 0.668945
+anchor_bottom = 0.36
+margin_bottom = -1.52588e-05
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="settingsOutline" type="Label" parent="BGPanel/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+custom_colors/font_outline_modulate = Color( 0.776471, 0.776471, 0.776471, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 11 )
+text = "mga kaayusan ng laro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="settingsLabel" type="Label" parent="BGPanel/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = -5.0
+margin_right = -1.0
+margin_bottom = -5.0
+size_flags_stretch_ratio = 2.1
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 12 )
+text = "mga kaayusan ng laro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="settingslLabel" type="Label" parent="BGPanel/Control/settingsLabel"]
+anchor_left = -0.0131579
+anchor_top = 0.0818182
+anchor_right = 1.00658
+anchor_bottom = 0.863636
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 13 )
+text = "mga kaayusan ng laro"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="BGPanel/FGPanel/guideCage/ShowTutorialsBtn" to="." method="_on_ShowTutorialBtn_pressed"]
+[connection signal="pressed" from="BGPanel/FGPanel/creditCage/ShowCreditsBtn" to="." method="_on_ShowCreditsBtn_pressed"]
+[connection signal="pressed" from="BGPanel/FGPanel/exitCage/BackButton" to="." method="_on_BackButton_pressed"]

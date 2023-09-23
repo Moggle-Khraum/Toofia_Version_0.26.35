@@ -1,0 +1,362 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/ButtonsIcons/IconButton_Large_Green_Square.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Arrow.png" type="Texture" id=6]
+[ext_resource path="res://Assets/BoxesBanners/Box_Blank_Square.png" type="Texture" id=7]
+[ext_resource path="res://Levels/MgaHayopSaBukid/Level1/1stQuestion/Level_1Q0MHsB.gd" type="Script" id=8]
+[ext_resource path="res://Assets/BoxesBanners/Box_WhiteOutline_Square.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GUI/Item2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Pause.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 40
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 40
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=31]
+size = 40
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 30
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 30
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 30
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 18
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 18
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[node name="Control" type="Panel"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="Panel" parent="."]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="levelBox" type="TextureRect" parent="background"]
+anchor_left = 0.305664
+anchor_top = 0.035
+anchor_right = 0.669922
+anchor_bottom = 0.138333
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level1Line" type="Label" parent="background/levelBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.0
+margin_bottom = -4.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 29 )
+text = "Level 1"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="level1Label" type="Label" parent="background/levelBox"]
+anchor_right = 1.0
+anchor_bottom = 0.935484
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 30 )
+text = "Level 1"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level1Label2" type="Label" parent="background/levelBox/level1Label"]
+anchor_left = -0.00106838
+anchor_top = -0.0491803
+anchor_right = 0.998932
+anchor_bottom = 0.95082
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 31 )
+text = "level 1"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pauseButton" type="Button" parent="background"]
+anchor_left = 0.00683594
+anchor_top = 0.0233333
+anchor_right = 0.100586
+anchor_bottom = 0.138333
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 12 )
+flat = true
+clip_text = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pauseIcon" type="TextureRect" parent="background/pauseButton"]
+anchor_left = 0.322917
+anchor_top = 0.217391
+anchor_right = 0.65625
+anchor_bottom = 0.782609
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="imageHolder" type="Sprite" parent="background"]
+position = Vector2( 250, 299 )
+scale = Vector2( 0.244296, 0.247043 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="imageText" type="TextureRect" parent="background"]
+anchor_left = 0.0664063
+anchor_top = 0.811667
+anchor_right = 0.418945
+anchor_bottom = 0.968333
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel2" type="Label" parent="background/imageText"]
+anchor_top = 0.0113636
+anchor_right = 1.0
+anchor_bottom = 1.01136
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 21 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="background/imageText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 22 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="background/imageText/exampleLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 23 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="askHolder" type="TextureRect" parent="background"]
+anchor_left = 0.479492
+anchor_top = 0.2
+anchor_right = 0.964844
+anchor_bottom = 0.928333
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLabel" type="Label" parent="background/askHolder"]
+anchor_left = 0.0717137
+anchor_top = 0.182891
+anchor_right = 0.940239
+anchor_bottom = 0.365782
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 24 )
+text = "Ano ang nasa larawan? Isa
+ba itong Gulay o Prutas?"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLabel2" type="Label" parent="background/askHolder/askLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 28 )
+text = "Ano ang nasa larawan? Isa
+ba itong Gulay o Prutas?"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nextButton" type="Button" parent="background"]
+anchor_left = 0.87207
+anchor_top = 0.773333
+anchor_right = 0.943359
+anchor_bottom = 0.895
+icon = ExtResource( 5 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="nextArrow" type="TextureRect" parent="background/nextButton"]
+anchor_left = 0.178082
+anchor_top = 0.191781
+anchor_right = 0.849315
+anchor_bottom = 0.780822
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="background/pauseButton" to="." method="_on_pauseButton_pressed"]
+[connection signal="pressed" from="background/nextButton" to="." method="_on_nextButton_pressed"]

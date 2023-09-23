@@ -1,0 +1,205 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/BoxesBanners/Box_Square.png" type="Texture" id=3]
+[ext_resource path="res://Assets/ButtonsIcons/IconButton_Small_Square.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UIElements/Icon_Lock.png" type="Texture" id=5]
+[ext_resource path="res://Assets/ButtonsIcons/IconButton_Small_Red_Circle.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/Icon_X.png" type="Texture" id=7]
+[ext_resource path="res://Levels/LevelLocked.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 27
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[node name="bgPanel" type="Popup"]
+self_modulate = Color( 1, 1, 1, 0.356863 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fgRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -178.5
+margin_right = 318.5
+margin_bottom = 178.5
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="noteText" type="TextureRect" parent="fgRect"]
+anchor_left = 0.27708
+anchor_top = 0.0406162
+anchor_right = 0.708791
+anchor_bottom = 0.197479
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="noteLabel2" type="Label" parent="fgRect/noteText"]
+anchor_top = 0.0113636
+anchor_right = 1.0
+anchor_bottom = 1.01136
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 1 )
+text = "Panuto:"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="noteLabel" type="Label" parent="fgRect/noteText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 2 )
+text = "panuto:"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="noteLabel" type="Label" parent="fgRect/noteText/noteLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 3 )
+text = "panuto:"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="babala" type="Label" parent="fgRect"]
+anchor_left = 0.357143
+anchor_top = 0.242297
+anchor_right = 0.961538
+anchor_bottom = 0.85014
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 4 )
+text = "Ang level na ito ay sarado. Mangyaring tapusin muna ang mga ibang levels upang mabuksan ang mga ito."
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="lockedIcon" type="TextureRect" parent="fgRect"]
+margin_left = 44.5
+margin_top = 98.5
+margin_right = 214.5
+margin_bottom = 265.5
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lockIcon" type="TextureRect" parent="fgRect/lockedIcon"]
+anchor_left = 0.188235
+anchor_top = 0.149701
+anchor_right = 0.823529
+anchor_bottom = 0.808383
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="hide" type="Button" parent="."]
+anchor_left = 0.733398
+anchor_top = 0.15
+anchor_right = 0.831054
+anchor_bottom = 0.3
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 6 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit" type="TextureRect" parent="hide"]
+anchor_left = 0.27
+anchor_top = 0.222222
+anchor_right = 0.75
+anchor_bottom = 0.755556
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="hide" to="." method="_on_hide_pressed"]

@@ -1,0 +1,612 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/CompatAlert.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/GUI/Item2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/GUI/gears2d2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/ButtonsIcons/IconButton_Large_Blue_Circle.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle_Pressed.png" type="Texture" id=13]
+[ext_resource path="res://Assets/GUI/Icon_Exit.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Images/blackScreen.png" type="Texture" id=16]
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 1800, 1200 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 37
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 25
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 10 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 25
+use_filter = true
+font_data = ExtResource( 10 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 18
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 18
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 18
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 356, 357 )
+
+[node name="PopupDialog" type="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shadow" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.545098 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.0556641
+anchor_top = 0.0733333
+anchor_right = 0.949219
+anchor_bottom = 0.906667
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="PanelPopup" type="NinePatchRect" parent="CenterContainer"]
+margin_right = 915.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 915, 500 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="panel" type="TextureRect" parent="CenterContainer/PanelPopup"]
+anchor_left = 0.171585
+anchor_top = -0.06
+anchor_right = 0.83388
+anchor_bottom = 0.106
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="babala" type="Label" parent="CenterContainer/PanelPopup/panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "kompatibleng babala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="faqs" type="Label" parent="CenterContainer/PanelPopup"]
+anchor_left = 0.147541
+anchor_top = 0.112
+anchor_right = 0.857924
+anchor_bottom = 0.204
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 11 )
+text = "Mga kadalasang katanungan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="faqs" type="Label" parent="CenterContainer/PanelPopup/faqs"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 12 )
+text = "mga kadalasang katanungan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelPopup"]
+anchor_left = 0.0262295
+anchor_top = 0.206
+anchor_right = 0.981421
+anchor_bottom = 0.868
+input_pass_on_modal_close_click = false
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CenterContainer/PanelPopup/ScrollContainer"]
+margin_right = 862.0
+margin_bottom = 773.0
+rect_clip_content = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="infoLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_right = 862.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 862, 80 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 13 )
+text = "Ayon sa pangunahing developer ng laro na si Dave, kung saan ay itinuro niya ang dalawang kasalukayang posibleng isyu kung bakit hindi gumagana o tumatakbo ang laro.
+"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="infoLine1" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/infoLine"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 80 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 14 )
+text = "Ayon sa pangunahing developer ng laro na si Dave, kung saan ay itinuro niya ang dalawang kasalukayang posibleng isyu kung bakit hindi gumagana o tumatakbo ang laro.
+"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="noteLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 84.0
+margin_right = 862.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 862, 30 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 15 )
+text = "Talaan: [Q] nangangahulugang Mga Katanungan o Questions.
+"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="noteLine1" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 118.0
+margin_right = 862.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 862, 30 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 15 )
+text = "           [A] nangangahulugang Mga Kasagutan o Answers.
+"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 152.0
+margin_right = 862.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 862, 60 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 13 )
+text = "[Q1.] Ang kasalukuyang selpon ay tumatakbo sa mas lumang bersyon ng Android(i.e, Android 5.1 at pababa)."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/askLine"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 60 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 14 )
+text = "[Q1.] Ang kasalukuyang selpon ay tumatakbo sa mas lumang bersyon ng Android(i.e, Android 5.1 at pababa)."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ansLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 216.0
+margin_right = 862.0
+margin_bottom = 391.0
+rect_min_size = Vector2( 862, 175 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 13 )
+text = "       [A1] Ang laro ay nangangailangan ng isang Android na selpon na tumatakbo sa Android 6 at pataas. Ang Android 6 aka 'Marshmallows' ay ang minimum na kinakailangang bersyun ng laro upang matagumpay na mai-install at mapatakbo ang laro nang maayos nang walang aberya. Ang pagpapalit ng kasalukuyang selpon sa pag-install ng laro ay isa rin sa mga pinakamainam na alternatibong solusyun."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ansLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/ansLine"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 80 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 14 )
+text = "       [A1] Ang laro ay nangangailangan ng isang Android na selpon na tumatakbo sa Android 6 at pataas. Ang Android 6 aka 'Marshmallows' ay ang minimum na kinakailangang bersyun ng laro upang matagumpay na mai-install at mapatakbo ang laro nang maayos nang walang aberya. Ang pagpapalit ng kasalukuyang selpon sa pag-install ng laro ay isa rin sa mga pinakamainam na alternatibong solusyun."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="askLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 395.0
+margin_right = 862.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 862, 40 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 13 )
+text = "[Q2.] Ang laro ay naka-install sa isang iOS device."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/askLine2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 14 )
+text = "[Q2.] Ang laro ay naka-install sa isang iOS device."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ansLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 439.0
+margin_right = 862.0
+margin_bottom = 689.0
+rect_min_size = Vector2( 862, 250 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 13 )
+text = "       [A2.] Ang pag-install ng laro sa isang iOS device ay hindi gagana dahil ang laro ay binuo para sa mga Android device lamang. Dalawang dahilan kung bakit ito ay isang eksklusibong laro na para Android lamang ay dahil una, ang pagpapalawak ng laro para sa mga iOS device ay wala sa plano noong ang laro ay nasa pag-unlad pa rin at pangalawa, ang paglabas ng laro para sa iOS ay nagpapatunay na isang walang katiyakan dahil ang engine ng laro ay may kasabay na isyu patungkol sa pagpapalabas ng 'Stable' o walang palya para sa plataporma ng iOS."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ansLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/ansLine2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 80 )
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 14 )
+text = "       [A2.] Ang pag-install ng laro sa isang iOS device ay hindi gagana dahil ang laro ay binuo para sa mga Android device lamang. Dalawang dahilan kung bakit ito ay isang eksklusibong laro na para Android lamang ay dahil una, ang pagpapalawak ng laro para sa mga iOS device ay wala sa plano noong ang laro ay nasa pag-unlad pa rin at pangalawa, ang paglabas ng laro para sa iOS ay nagpapatunay na isang walang katiyakan dahil ang engine ng laro ay may kasabay na isyu patungkol sa pagpapalabas ng 'Stable' o walang palya para sa plataporma ng iOS."
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="noteLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+margin_top = 693.0
+margin_right = 862.0
+margin_bottom = 773.0
+rect_min_size = Vector2( 862, 80 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 15 )
+text = "
+Maaari kang lumabas sa laro sa pamamagitan ng pag-click sa icon ng bahay na matatagpuan sa ibaba sa gitna-sa ilalim"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit" type="TextureButton" parent="."]
+anchor_left = 0.446289
+anchor_top = 0.796667
+anchor_right = 0.544922
+anchor_bottom = 0.963333
+focus_mode = 0
+action_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="exit"]
+anchor_left = 0.178218
+anchor_top = 0.15
+anchor_right = 0.831683
+anchor_bottom = 0.85
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 69, 56 )
+scale = Vector2( 0.22, 0.22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cog1" type="Sprite" parent="Node2D"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2( -1.12057e-05, 3.64642 )
+scale = Vector2( 0.104315, 0.104754 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cog2" type="Sprite" parent="Node2D"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2( 4018.17, 4.54541 )
+scale = Vector2( 0.104315, 0.104754 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 71, 533 )
+scale = Vector2( 0.22, 0.22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cog3" type="Sprite" parent="Node2D2"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2( -1.12057e-05, 3.64642 )
+scale = Vector2( 0.104315, 0.104754 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cog4" type="Sprite" parent="Node2D2"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2( 4018.17, 4.54541 )
+scale = Vector2( 0.104315, 0.104754 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="knobs" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.175
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="knob1" type="Panel" parent="knobs"]
+anchor_left = 0.917969
+anchor_top = 0.419048
+anchor_right = 0.943359
+anchor_bottom = 0.666667
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="knob0" type="Panel" parent="knobs"]
+anchor_left = 0.0546875
+anchor_top = 0.419048
+anchor_right = 0.0800781
+anchor_bottom = 0.666667
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="knobs2" type="Control" parent="."]
+anchor_left = 0.00195313
+anchor_top = 0.795
+anchor_right = 1.00195
+anchor_bottom = 0.97
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="knob1" type="Panel" parent="knobs2"]
+anchor_left = 0.917969
+anchor_top = 0.419048
+anchor_right = 0.943359
+anchor_bottom = 0.666667
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="knob0" type="Panel" parent="knobs2"]
+anchor_left = 0.0546875
+anchor_top = 0.419048
+anchor_right = 0.0800781
+anchor_bottom = 0.666667
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

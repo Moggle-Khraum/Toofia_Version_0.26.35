@@ -1,0 +1,564 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://Scripts/MenuChoicesScript.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Images/Tracing_Dd.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Images/farmAnimals.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/LevelScroll.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Fonts/ButtonThemes.tres" type="Theme" id=7]
+[ext_resource path="res://Assets/Images/humanbody.jpg" type="Texture" id=8]
+[ext_resource path="res://Assets/Images/Fruits4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GUI/leftArrow.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GUI/rightArrow.png" type="Texture" id=11]
+[ext_resource path="res://Levels/1PrutasAtGulay/PrutasAtGulayLevel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Levels/MgaHayopSaBukid/MgaHayopSaBukid.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Levels/PagguhitNgAlpabeto/PagguhitNgAlpabeto.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Levels/ParteNgKatawanNgTao/ParteNgKatawanNgTao.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/GUI/Blue_Rectangle.png" type="Texture" id=16]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = -5
+extra_spacing_space = -3
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+resource_local_to_scene = true
+size = 28
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+resource_local_to_scene = true
+size = 23
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
+resource_local_to_scene = true
+size = 25
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+resource_local_to_scene = true
+size = 24
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="CanvasItemMaterial" id=7]
+light_mode = 1
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 1208, 653 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 1208, 653 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/Fonts/KiriFont.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 2
+expand_margin_left = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 7 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BloxoftimeLabel" type="Label" parent="Panel"]
+anchor_left = 0.189453
+anchor_top = 0.0133333
+anchor_right = 0.8125
+anchor_bottom = 0.15
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 2 )
+text = "Blocks of time"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LevelSelectLabel" type="Label" parent="Panel"]
+anchor_left = 0.18457
+anchor_top = 0.121667
+anchor_right = 0.822266
+anchor_bottom = 0.216667
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 3 )
+text = "Pumili ng Paksa sa Ibaba"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Panel" type="Panel" parent="Panel"]
+self_modulate = Color( 1, 1, 1, 0.0392157 )
+anchor_left = 0.352539
+anchor_top = 0.228333
+anchor_right = 0.680664
+anchor_bottom = 0.77
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.0195313
+anchor_top = 0.271667
+anchor_right = 0.974609
+anchor_bottom = 1.27833
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 13
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+scroll_vertical_enabled = false
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+scroll_duration = 0.3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+margin_right = 2254.0
+margin_bottom = 226.0
+mouse_filter = 2
+custom_constants/margin_right = 430
+custom_constants/margin_top = 10
+custom_constants/margin_left = 430
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer"]
+margin_left = 430.0
+margin_top = 10.0
+margin_right = 1824.0
+margin_bottom = 216.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+theme = ExtResource( 7 )
+custom_constants/separation = 150
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Choice1" type="TextureRect" parent="ScrollContainer/MarginContainer/HBoxContainer"]
+margin_right = 236.0
+margin_bottom = 206.0
+mouse_filter = 2
+texture = ExtResource( 9 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CardMenu1" type="Button" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice1"]
+self_modulate = Color( 1, 1, 1, 0.32549 )
+anchor_left = 0.217262
+anchor_top = 0.281818
+anchor_right = 0.616071
+anchor_bottom = 0.636364
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="CardLabel1" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 165.0
+mouse_filter = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 8 )
+text = "Prutas at Gulay"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Choice2" type="TextureRect" parent="ScrollContainer/MarginContainer/HBoxContainer"]
+margin_left = 386.0
+margin_right = 622.0
+margin_bottom = 206.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+stretch_mode = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CardMenu2" type="Button" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice2"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.305085
+anchor_top = 0.295652
+anchor_right = 0.65678
+anchor_bottom = 0.6
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="CardLabel2" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice2"]
+anchor_top = 0.834783
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 9 )
+text = "Mga Hayop sa bukid"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Choice3" type="TextureRect" parent="ScrollContainer/MarginContainer/HBoxContainer"]
+margin_left = 772.0
+margin_right = 1008.0
+margin_bottom = 206.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+stretch_mode = 4
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CardMenu3" type="Button" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice3"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.283898
+anchor_top = 0.278261
+anchor_right = 0.635593
+anchor_bottom = 0.582609
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="CardLabel3" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice3"]
+anchor_left = -0.118644
+anchor_top = 0.8
+anchor_right = 1.10593
+anchor_bottom = 1.0087
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 10 )
+text = "Pagguhit ng alpabeto"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Choice4" type="TextureRect" parent="ScrollContainer/MarginContainer/HBoxContainer"]
+margin_left = 1158.0
+margin_right = 1394.0
+margin_bottom = 206.0
+mouse_filter = 2
+theme = ExtResource( 7 )
+texture = ExtResource( 8 )
+stretch_mode = 6
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CardMenu4" type="Button" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice4"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.34322
+anchor_top = 0.234783
+anchor_right = 0.694915
+anchor_bottom = 0.565217
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="CardLabel4" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice4"]
+anchor_left = -0.233051
+anchor_top = 0.791304
+anchor_right = 1.22458
+anchor_bottom = 1.00435
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 11 )
+text = "bahagi ng katawan ng tao"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="VisibleBlockerRight" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.596078 )
+light_mask = 5
+material = SubResource( 7 )
+anchor_left = 0.68457
+anchor_top = 0.191667
+anchor_right = 0.979492
+anchor_bottom = 0.778333
+margin_top = -4.0
+margin_bottom = -4.0
+custom_styles/panel = SubResource( 19 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="RightButton" type="Button" parent="VisibleBlockerRight"]
+anchor_right = 0.192811
+anchor_bottom = 0.999999
+margin_right = -11.3811
+margin_bottom = 8.0004
+custom_styles/hover = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+icon = ExtResource( 11 )
+flat = true
+clip_text = true
+align = 2
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="VisibleBlockerLeft" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.313726 )
+anchor_left = 0.0214844
+anchor_top = 0.185
+anchor_right = 0.306641
+anchor_bottom = 0.785
+custom_styles/panel = SubResource( 20 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LeftButton" type="Button" parent="VisibleBlockerLeft"]
+anchor_left = 0.822824
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/hover = SubResource( 16 )
+custom_styles/focus = SubResource( 17 )
+icon = ExtResource( 10 )
+flat = true
+clip_text = true
+align = 2
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="SchoolLogo" type="Panel" parent="."]
+anchor_left = 0.841797
+anchor_top = 0.0283333
+anchor_right = 0.975586
+anchor_bottom = 0.223333
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="SchoolLogo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "School
+Logo"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GameLogo" type="Panel" parent="."]
+anchor_left = 0.0244141
+anchor_top = 0.03
+anchor_right = 0.158203
+anchor_bottom = 0.225
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="GameLogo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "Game
+Logo"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GoBackButton" type="Button" parent="."]
+anchor_left = 0.367188
+anchor_top = 0.863333
+anchor_right = 0.614258
+anchor_bottom = 0.996667
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="BackLabel" type="Label" parent="GoBackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 7
+custom_fonts/font = SubResource( 1 )
+text = "Bumalik"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MgaHayopSaBukid" parent="." instance=ExtResource( 13 )]
+unique_name_in_owner = true
+visible = false
+
+[node name="PagguhitNgAlpabeto" parent="." instance=ExtResource( 14 )]
+unique_name_in_owner = true
+
+[node name="ParteNgKatawanNgTao" parent="." instance=ExtResource( 15 )]
+unique_name_in_owner = true
+
+[node name="PrutasAtGulay" parent="." instance=ExtResource( 12 )]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice1/CardMenu1" to="." method="_on_CardMenu1_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice2/CardMenu2" to="." method="_on_CardMenu2_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice3/CardMenu3" to="." method="_on_CardMenu3_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice4/CardMenu4" to="." method="_on_CardMenu4_pressed"]
+[connection signal="pressed" from="VisibleBlockerRight/RightButton" to="ScrollContainer" method="_on_RightButton_pressed"]
+[connection signal="pressed" from="VisibleBlockerLeft/LeftButton" to="ScrollContainer" method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="GoBackButton" to="." method="_on_GoBackButton_pressed"]

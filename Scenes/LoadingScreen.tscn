@@ -1,0 +1,409 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scenes/CompatWarning.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/GUI/gears2d2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/blackScreen.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/Background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/Line.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scripts/LoadingScreenScript.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=16]
+size = 165
+outline_size = 5
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 165
+outline_size = 2
+outline_color = Color( 0.878431, 0.639216, 0.352941, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=18]
+resource_local_to_scene = true
+size = 18
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=19]
+resource_local_to_scene = true
+size = 18
+use_filter = true
+font_data = ExtResource( 8 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 30
+use_filter = true
+font_data = ExtResource( 8 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 40
+outline_size = 3
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+extra_spacing_char = 6
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 40
+use_filter = true
+extra_spacing_char = 6
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 23
+outline_size = 3
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+extra_spacing_char = 6
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 23
+use_filter = true
+extra_spacing_char = 6
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="MainPanel" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TitleLabel" type="Label" parent="MainPanel"]
+anchor_left = 0.0195313
+anchor_top = 0.0233333
+anchor_right = 0.979492
+anchor_bottom = 0.421667
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 12
+custom_fonts/font = SubResource( 16 )
+text = "Toofia"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel2" type="Label" parent="MainPanel/TitleLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 12
+custom_fonts/font = SubResource( 17 )
+text = "Toofia"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TMLabel" type="Label" parent="MainPanel"]
+anchor_left = 0.84668
+anchor_top = 0.075
+anchor_right = 0.888086
+anchor_bottom = 0.131945
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 18 )
+text = "tm"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="TMLabel2" type="Label" parent="MainPanel/TMLabel"]
+anchor_top = -0.0487806
+anchor_right = 1.0
+anchor_bottom = 0.951219
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 19 )
+text = "tm"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="SubTitleLabel" type="Label" parent="MainPanel"]
+anchor_left = 0.0273438
+anchor_top = 0.335
+anchor_right = 0.988281
+anchor_bottom = 0.47
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 20 )
+text = "Kasangkapang Tulong pang-edukasyon"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="SubTitleLabel2" type="Label" parent="MainPanel/SubTitleLabel"]
+anchor_left = -0.00106838
+anchor_top = -0.0491803
+anchor_right = 0.998932
+anchor_bottom = 0.95082
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 21 )
+text = "Kasangkapang Tulong pang-edukasyon"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LoadingLabel" type="Label" parent="MainPanel"]
+unique_name_in_owner = true
+anchor_left = 0.140625
+anchor_top = 0.575
+anchor_right = 0.756836
+anchor_bottom = 0.673333
+margin_right = -3.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 22 )
+text = "Loading Game"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="LoadingLabel2" type="Label" parent="MainPanel/LoadingLabel"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 23 )
+text = "Loading Game"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="loadingBar" type="TextureProgress" parent="MainPanel"]
+unique_name_in_owner = true
+anchor_left = 0.140625
+anchor_top = 0.67
+anchor_right = 0.756836
+anchor_bottom = 0.761667
+margin_top = -3.05176e-05
+input_pass_on_modal_close_click = false
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 6 )
+texture_progress_offset = Vector2( 1, 1 )
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="percent" type="Label" parent="MainPanel/loadingBar"]
+unique_name_in_owner = true
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 0.89091
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 27 )
+text = "0"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="percent0" type="Label" parent="MainPanel/loadingBar/percent"]
+unique_name_in_owner = true
+anchor_left = 0.0126783
+anchor_top = 0.0681811
+anchor_right = 0.987322
+anchor_bottom = 0.90909
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 28 )
+text = "0"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Node2D" type="Node2D" parent="MainPanel"]
+position = Vector2( 821, 425 )
+scale = Vector2( 0.22, 0.22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SpinGear" type="Sprite" parent="MainPanel/Node2D"]
+unique_name_in_owner = true
+show_behind_parent = true
+scale = Vector2( 0.075, 0.075 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SpinGear2" type="Sprite" parent="MainPanel/Node2D"]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2( 145.453, -231.818 )
+scale = Vector2( 0.075, 0.075 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VersionLabel" type="Label" parent="."]
+anchor_left = 0.0214844
+anchor_top = 0.911667
+anchor_right = 0.285156
+anchor_bottom = 0.963333
+custom_fonts/font = SubResource( 25 )
+text = "Toofia Prototype ver.0.7.15"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="MadeInLabel" type="Label" parent="."]
+anchor_left = 0.740234
+anchor_top = 0.92
+anchor_right = 0.980469
+anchor_bottom = 0.971667
+custom_fonts/font = SubResource( 26 )
+text = "made in godot engine 3.5"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="blackFade" type="Sprite" parent="."]
+unique_name_in_owner = true
+position = Vector2( 474, 298 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PopupDialog" parent="." instance=ExtResource( 1 )]
+
+[connection signal="value_changed" from="MainPanel/loadingBar" to="." method="_on_loadingBar_value_changed"]

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Idle - Ismael Cobble.wav-0459a8011e51c90294759f9b6069831c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Idle - Ismael Cobble.wav"
+dest_files=[ "res://.import/Idle - Ismael Cobble.wav-0459a8011e51c90294759f9b6069831c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

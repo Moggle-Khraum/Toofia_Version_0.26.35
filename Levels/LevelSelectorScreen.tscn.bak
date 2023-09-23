@@ -1,0 +1,142 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Themes/levelsTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Levels/PrutasAtGulay/LevelScroller.gd" type="Script" id=2]
+
+[node name="ScrollContainer" type="ScrollContainer"]
+anchor_left = 0.0761719
+anchor_top = 0.2
+anchor_right = 0.929688
+anchor_bottom = 0.95
+theme = ExtResource( 1 )
+scroll_vertical_enabled = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1763.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 1763, 450 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 0.444444
+rect_min_size = Vector2( 880, 200 )
+custom_constants/separation = 22
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="Control/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button2" type="Button" parent="Control/HBoxContainer"]
+margin_left = 222.0
+margin_right = 422.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button3" type="Button" parent="Control/HBoxContainer"]
+margin_left = 444.0
+margin_right = 644.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button4" type="Button" parent="Control/HBoxContainer"]
+margin_left = 666.0
+margin_right = 866.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button5" type="Button" parent="Control/HBoxContainer"]
+margin_left = 888.0
+margin_right = 1088.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button6" type="Button" parent="Control/HBoxContainer"]
+margin_left = 1110.0
+margin_right = 1310.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button7" type="Button" parent="Control/HBoxContainer"]
+margin_left = 1332.0
+margin_right = 1532.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button8" type="Button" parent="Control/HBoxContainer"]
+margin_left = 1554.0
+margin_right = 1754.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
+anchor_top = 0.444444
+anchor_right = 1.0
+anchor_bottom = 0.888889
+margin_top = 20.0002
+margin_bottom = 20.0002
+rect_min_size = Vector2( 880, 200 )
+custom_constants/separation = 22
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Button9" type="Button" parent="Control/HBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button10" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 222.0
+margin_right = 422.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button11" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 444.0
+margin_right = 644.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button12" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 666.0
+margin_right = 866.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button13" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 888.0
+margin_right = 1088.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button14" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 1110.0
+margin_right = 1310.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button15" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 1332.0
+margin_right = 1532.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+
+[node name="Button16" type="Button" parent="Control/HBoxContainer2"]
+margin_left = 1554.0
+margin_right = 1754.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )

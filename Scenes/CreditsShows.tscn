@@ -1,0 +1,402 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Titillium-RegularItalic.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/CreditsDummy.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Fonts/Titillium-Bold.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Fonts/Titillium-BoldItalic.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle_Pressed.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Home.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GUI/Icon_LongSquare.png" type="Texture" id=11]
+[ext_resource path="res://Assets/UIElements/Icon_Award.png" type="Texture" id=12]
+[ext_resource path="res://Assets/UIElements/Icon_SqiuareTilt.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=17]
+size = 37
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 14 )
+fallback/0 = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 37
+outline_size = 1
+outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+use_filter = true
+font_data = ExtResource( 14 )
+fallback/0 = ExtResource( 1 )
+
+[sub_resource type="Theme" id=14]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 23
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=20]
+resource_local_to_scene = true
+size = 23
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="CenterContainer" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ExitButton" type="TextureButton" parent="CenterContainer"]
+anchor_left = 0.898438
+anchor_top = 0.0383333
+anchor_right = 0.977539
+anchor_bottom = 0.168333
+margin_right = -6.10352e-05
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="xIcon" type="TextureRect" parent="CenterContainer/ExitButton"]
+anchor_left = 0.17284
+anchor_top = 0.128205
+anchor_right = 0.839506
+anchor_bottom = 0.807692
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="credits" type="TextureRect" parent="CenterContainer"]
+anchor_left = 0.0595703
+anchor_top = 0.0666667
+anchor_right = 0.591929
+anchor_bottom = 0.224659
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="creditsLabel" type="Label" parent="CenterContainer/credits"]
+anchor_left = 0.145098
+anchor_top = 0.0235294
+anchor_right = 0.978431
+anchor_bottom = 0.917647
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 17 )
+text = "mga pagkilala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="creditsLabel" type="Label" parent="CenterContainer/credits/creditsLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 18 )
+text = "mga pagkilala"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="iconBlock" type="TextureRect" parent="CenterContainer"]
+anchor_left = 0.0214844
+anchor_top = 0.0383333
+anchor_right = 0.151965
+anchor_bottom = 0.255806
+margin_bottom = -6.10352e-05
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="medalIcon" type="TextureRect" parent="CenterContainer/iconBlock"]
+anchor_left = 0.269231
+anchor_top = 0.307692
+anchor_right = 0.717949
+anchor_bottom = 0.782051
+texture = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.0292969
+anchor_top = 0.265
+anchor_right = 0.973633
+anchor_bottom = 0.936667
+theme = SubResource( 14 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 879.0
+margin_bottom = 2265.0
+rect_clip_content = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+margin_right = 879.0
+margin_bottom = 2265.0
+rect_min_size = Vector2( 879, 0 )
+custom_fonts/bold_italics_font = SubResource( 3 )
+custom_fonts/italics_font = SubResource( 4 )
+custom_fonts/bold_font = SubResource( 19 )
+custom_fonts/normal_font = SubResource( 20 )
+bbcode_enabled = true
+bbcode_text = "
+[center][b][u]A.B.S. Studios[/u][/b][/center]
+[center][i]Alabado, Bicol, Samaranos Studios[/i][/center]
+[center][i]Toofia: Kasangkapang Tulong Pang-edukasiyon [/i][/center]
+
+[center]• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •[/center]
+[center][b]Ang Grupo ng mga Developers.[/b][/center]
+[center]Mga Miyembro ng Pangkat:[/center]
+
+[center][b] -[u] Dave T. Alabado BSIT-4[/u][/b]
+Ang Pangunahing Developer ng Proyekto, Kasamang Tagapagdisenyo, Pangunahing
+Alpha Tester at Kasamang Responsable sa Dokumentasyon
+
+[b] -[u] Princess P. Jai Bicol BSIT-4[/u][/b]
+Ang Pangunahing Responsable sa Dokumentasyon ng Proyekto, Pangunahing
+Tagapagdisenyo, Kasamang Mangongolekta ng Datos,  at Pangunahing Beta Tester
+
+[b] -[u] Karen Samaranos[/u][/b]
+Ang Kasamang Responsable sa Dokumentasyon ng Proyekto, Pangunahing Pagsusuri
+ng Kalidad, Pangunahing Mangongolekta ng Datos, at Kasamang Beta Tester[/center]
+
+[center]• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •[/center]
+
+[center][b][u]Mga Pagkilala[/u][/b]
+[u]Mga Taong may Parte sa Proyekto[/u][/center]
+
+[center][b] Para sa Musika ng Laro[/b][/center]
+
+[center][b]Jan 'Tzaot' Schulte[/b] | [b]Ismael Cobble[/b] | [b]Eric Matyas[/b]
+
+[i][u]Para sa mga sumusunod :[/u][/i]
+Intro, Idle & Mellow Tune, at More Monkey Island Band & The Monkey Island
+Band Returns [/center]
+
+[center][b]Para sa Sound Effects(SFX) ng Laro :[/b][/center]
+
+[center][b]NenadSimic[/b] | [b]David 'ViRiX' McKee[/b] | [b]Pixabay[/b] | [b]UNIVERSFIELD[/b]
+
+[i][u]Para sa mga sumusunod :[/u][/i]
+Menu Selection Click, Accept, Correct Answer & Scroll Pop, at Wrong Answer,
+Level Error & Button Pop[/center]
+
+[center]• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •[/center]
+
+[center][b]Para sa Art Assets ng Laro :[/b][/center]
+
+[center][b]Penzilla Design[/b] | [b]Prinbles[/b]
+
+[i][u]Para sa mga sumusunod :[/u][/i]
+Vector Icon Pack - [Pixel Art] at Basic GUI/UI Bundle - Raster
+and Vector [Royalty Free], at Prinbles - GUI Asset Bliss [/center]
+
+[center]• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •[/center]
+
+[center][b]Para sa Fonts ng Laro :[/b][/center]
+
+[center][b]GGBotNet Designs[/b] | [b]Pablo Lizardo[/b] | [b]Accademia di
+Belle Arti Urbino & Peter Wiegel[/b]
+
+[i][u]Para sa mga sumusunod :[/u][/i]
+Kaph Font, KiriFont, at Titillium-Bold, Titillium BoldItalic, Titillium-Regular at Titillium-RegularItalic [/center]
+
+[center]• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •[/center]
+
+[center][b]Mga Gabay na Ginamit sa Pagbuo ng Proyektong Laro[/b]
+
+[b]Volter[/b] [YT:[u]@MewPurPur][/u] | [b]David Satrio[/b] [YT:[u]@davidsatrio3847][/u] | [b]Kron[/b] 
+[YT:[u]@actuallyKron][/u] | [b]Chevifier[/b] [YT:[u]@Chevifier][/u] | [b]The Shaggy Dev[/b]
+[YT:[u]@TheShaggyDev][/u] | [b]rocket 007[/b] [YT:[u]@rocket007][/u] | [b]Jon Topielski[/b]
+[YT:[u]@jontopielski6227][/u] |  [b]MelonDev[/b] [DC:[u]@melonndev][/u]
+
+[u][i]Para sa mga sumusunod :[/i][/u]
+Tween Introduction Tutorial, Godot Swipe Menu Tutorial, Intro Maker Tutorial,
+Interactive Loading Screen Tutorial, Scene Transitions Tutorial, Super Cool Button
+Tutorial, Fade Transition Tutorial, Viewport Tutorial
+
+
+[/center]
+
+
+
+
+
+"
+text = "
+A.B.S. Studios
+Alabado, Bicol, Samaranos Studios
+Toofia: Kasangkapang Tulong Pang-edukasiyon 
+
+• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •
+Ang Grupo ng mga Developers.
+Mga Miyembro ng Pangkat:
+
+ - Dave T. Alabado BSIT-4
+Ang Pangunahing Developer ng Proyekto, Kasamang Tagapagdisenyo, Pangunahing
+Alpha Tester at Kasamang Responsable sa Dokumentasyon
+
+ - Princess P. Jai Bicol BSIT-4
+Ang Pangunahing Responsable sa Dokumentasyon ng Proyekto, Pangunahing
+Tagapagdisenyo, Kasamang Mangongolekta ng Datos,  at Pangunahing Beta Tester
+
+ - Karen Samaranos
+Ang Kasamang Responsable sa Dokumentasyon ng Proyekto, Pangunahing Pagsusuri
+ng Kalidad, Pangunahing Mangongolekta ng Datos, at Kasamang Beta Tester
+
+• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •
+
+Mga Pagkilala
+Mga Taong may Parte sa Proyekto
+
+ Para sa Musika ng Laro
+
+Jan 'Tzaot' Schulte | Ismael Cobble | Eric Matyas
+
+Para sa mga sumusunod :
+Intro, Idle & Mellow Tune, at More Monkey Island Band & The Monkey Island
+Band Returns 
+
+Para sa Sound Effects(SFX) ng Laro :
+
+NenadSimic | David 'ViRiX' McKee | Pixabay | UNIVERSFIELD
+
+Para sa mga sumusunod :
+Menu Selection Click, Accept, Correct Answer & Scroll Pop, at Wrong Answer,
+Level Error & Button Pop
+
+• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •
+
+Para sa Art Assets ng Laro :
+
+Penzilla Design | Prinbles
+
+Para sa mga sumusunod :
+Vector Icon Pack - [Pixel Art] at Basic GUI/UI Bundle - Raster
+and Vector [Royalty Free], at Prinbles - GUI Asset Bliss 
+
+• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •
+
+Para sa Fonts ng Laro :
+
+GGBotNet Designs | Pablo Lizardo | Accademia di
+Belle Arti Urbino & Peter Wiegel
+
+Para sa mga sumusunod :
+Kaph Font, KiriFont, at Titillium-Bold, Titillium BoldItalic, Titillium-Regular at Titillium-RegularItalic 
+
+• ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ • ~ •
+
+Mga Gabay na Ginamit sa Pagbuo ng Proyektong Laro
+
+Volter [YT:@MewPurPur] | David Satrio [YT:@davidsatrio3847] | Kron 
+[YT:@actuallyKron] | Chevifier [YT:@Chevifier] | The Shaggy Dev
+[YT:@TheShaggyDev] | rocket 007 [YT:@rocket007] | Jon Topielski
+[YT:@jontopielski6227] |  MelonDev [DC:@melonndev]
+
+Para sa mga sumusunod :
+Tween Introduction Tutorial, Godot Swipe Menu Tutorial, Intro Maker Tutorial,
+Interactive Loading Screen Tutorial, Scene Transitions Tutorial, Super Cool Button
+Tutorial, Fade Transition Tutorial, Viewport Tutorial
+
+
+
+
+
+
+
+
+"
+fit_content_height = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="CenterContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

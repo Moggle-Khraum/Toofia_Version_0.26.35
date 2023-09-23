@@ -1,0 +1,1475 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Pause.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GUI/Item2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/BoxesBanners/Box_WhiteOutline_Square.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Audio/levelsAudio/wrongAnswer.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Audio/levelsAudio/correctAnswer.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/repeatInfo.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Images/levelImages/potato.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Audio/levelsAudio/patatas.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Levels/1PrutasAtGulay/Level1/2ndQuestion/CorrectScreen.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/GUI/Box_Rounded.png" type="Texture" id=13]
+[ext_resource path="res://Assets/UIIcons/Icon_Small_Lock.png" type="Texture" id=16]
+[ext_resource path="res://Assets/BoxesBanners/Box_Blank_Square.png" type="Texture" id=17]
+[ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=19]
+[ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=20]
+[ext_resource path="res://Levels/1PrutasAtGulay/Level1/1stQuestion/PausePanel0.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Levels/1PrutasAtGulay/Level1/2ndQuestion/Level_1Q2.gd" type="Script" id=22]
+
+[sub_resource type="DynamicFont" id=90]
+size = 33
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=91]
+size = 33
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=92]
+size = 33
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=89]
+
+[sub_resource type="DynamicFont" id=21]
+size = 30
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 30
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 30
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 20
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=38]
+size = 20
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 2
+extra_spacing_space = 2
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 20
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 20
+use_filter = true
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=41]
+size = 20
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 20
+outline_size = 2
+outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+use_filter = true
+extra_spacing_bottom = -13
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 20
+use_filter = true
+extra_spacing_top = 3
+extra_spacing_bottom = -13
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=46]
+size = 65
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=47]
+size = 65
+use_filter = true
+font_data = ExtResource( 7 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=79]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 1, 1, 1, 0.768627 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0.462745, 0.819608, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="DynamicFont" id=82]
+size = 30
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=81]
+size = 30
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=80]
+size = 30
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=96]
+size = 27
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=97]
+size = 27
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=98]
+size = 27
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=58]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 1, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id=59]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 1, 0.0627451, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id=60]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 1, 0.0627451, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id=61]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 1, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="DynamicFont" id=93]
+size = 38
+outline_size = 2
+outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=94]
+size = 38
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=95]
+size = 38
+use_filter = true
+font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 6 )
+
+[node name="Control" type="Panel"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="background" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="levelBox" type="TextureRect" parent="background"]
+anchor_left = 0.213867
+anchor_top = 0.035
+anchor_right = 0.780273
+anchor_bottom = 0.138333
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level2Line" type="Label" parent="background/levelBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 90 )
+text = "pangalawang tanong"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="level2Label" type="Label" parent="background/levelBox"]
+anchor_left = 0.0137931
+anchor_right = 0.984483
+anchor_bottom = 0.903229
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 91 )
+text = "pangalawang tanong"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level2Label2" type="Label" parent="background/levelBox/level2Label"]
+anchor_left = -0.00106838
+anchor_top = -0.0491803
+anchor_right = 0.998932
+anchor_bottom = 0.95082
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 92 )
+text = "pangalawang tanong"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pauseButton" type="Button" parent="background"]
+anchor_left = 0.00683594
+anchor_top = 0.0283333
+anchor_right = 0.100586
+anchor_bottom = 0.146667
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 20 )
+flat = true
+clip_text = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pauseIcon" type="TextureRect" parent="background/pauseButton"]
+anchor_left = 0.322917
+anchor_top = 0.217391
+anchor_right = 0.65625
+anchor_bottom = 0.782609
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="imageHolder" type="Sprite" parent="background"]
+position = Vector2( 250, 299 )
+scale = Vector2( 0.244296, 0.247043 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="potato" type="TextureRect" parent="background/imageHolder"]
+unique_name_in_owner = true
+anchor_left = 0.0619019
+anchor_top = 0.18085
+anchor_right = 0.937805
+anchor_bottom = 0.822112
+margin_left = -761.5
+margin_top = -761.0
+margin_right = -761.5
+margin_bottom = -761.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="repeat" type="Button" parent="background/imageHolder/potato"]
+unique_name_in_owner = true
+anchor_left = 0.156158
+anchor_top = 0.124532
+anchor_right = 0.86437
+anchor_bottom = 0.886704
+margin_left = -3.05176e-05
+margin_top = -4.57764e-05
+margin_bottom = -6.10352e-05
+focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="coverButton" type="Panel" parent="background/imageHolder/potato"]
+unique_name_in_owner = true
+anchor_left = 0.113193
+anchor_top = 0.0881327
+anchor_right = 0.923539
+anchor_bottom = 0.914486
+margin_left = -3.05176e-05
+margin_right = 0.00012207
+input_pass_on_modal_close_click = false
+custom_styles/panel = SubResource( 89 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="infoPotato" type="AudioStreamPlayer" parent="background/imageHolder/potato"]
+unique_name_in_owner = true
+stream = ExtResource( 11 )
+bus = "Voices"
+
+[node name="imageText" type="TextureRect" parent="background"]
+anchor_left = 0.0664063
+anchor_top = 0.811667
+anchor_right = 0.418945
+anchor_bottom = 0.968333
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel2" type="Label" parent="background/imageText"]
+anchor_top = 0.0113636
+anchor_right = 1.0
+anchor_bottom = 1.01136
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 21 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="background/imageText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 22 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exampleLabel" type="Label" parent="background/imageText/exampleLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 23 )
+text = "halimbawang larawan"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="askHolder" type="TextureRect" parent="background"]
+anchor_left = 0.470703
+anchor_top = 0.173333
+anchor_right = 0.960938
+anchor_bottom = 0.758333
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLabel" type="Label" parent="background/askHolder"]
+anchor_left = 0.0677291
+anchor_top = 0.042735
+anchor_right = 0.954183
+anchor_bottom = 0.344729
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 37 )
+text = "1. Batay sa iyong narinig, Ano ang pangalan ng gulay na nasa larawan?"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="askLabel2" type="Label" parent="background/askHolder/askLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 38 )
+text = "1. Batay sa iyong narinig, Ano ang pangalan ng gulay na nasa larawan?"
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="answerLabelA" type="Label" parent="background/askHolder"]
+anchor_left = 0.0478087
+anchor_top = 0.361823
+anchor_right = 0.848605
+anchor_bottom = 0.478632
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 39 )
+text = "A. Ito po ay isang Talong."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel2" type="Label" parent="background/askHolder/answerLabelA"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 40 )
+text = "A. ito po ay isang Talong."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="answerLabelB" type="Label" parent="background/askHolder"]
+anchor_left = 0.0597609
+anchor_top = 0.490029
+anchor_right = 0.924302
+anchor_bottom = 0.581197
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 41 )
+text = "B. Ito po ay isang Mansanas."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabelB2" type="Label" parent="background/askHolder/answerLabelB"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 40 )
+text = "B. Ito po ay isang Mansanas."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="answerLabelC" type="Label" parent="background/askHolder"]
+anchor_left = 0.0478087
+anchor_top = 0.612536
+anchor_right = 0.888445
+anchor_bottom = 0.7151
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 42 )
+text = "C. Ito po ay isang Patatas"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabelC2" type="Label" parent="background/askHolder/answerLabelC"]
+anchor_left = 0.00236967
+anchor_right = 1.0
+anchor_bottom = 0.833334
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 43 )
+text = "C. Ito po ay isang Patatas"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="AnswerPanel" type="HBoxContainer" parent="background"]
+unique_name_in_owner = true
+anchor_left = 0.553711
+anchor_top = 0.771667
+anchor_right = 0.890625
+anchor_bottom = 0.930001
+custom_constants/separation = 30
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="A" type="Button" parent="background/AnswerPanel"]
+margin_right = 95.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 95, 95 )
+focus_mode = 0
+action_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 13 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pickA" type="Label" parent="background/AnswerPanel/A"]
+anchor_left = 0.0947368
+anchor_top = 0.0842112
+anchor_right = 0.905263
+anchor_bottom = 0.926316
+rect_min_size = Vector2( 75, 75 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 46 )
+text = "A
+"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pickA2" type="Label" parent="background/AnswerPanel/A/pickA"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 47 )
+text = "A"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="B" type="Button" parent="background/AnswerPanel"]
+margin_left = 125.0
+margin_right = 220.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 95, 95 )
+focus_mode = 0
+action_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 13 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pickB" type="Label" parent="background/AnswerPanel/B"]
+anchor_left = 0.0842105
+anchor_top = 0.147368
+anchor_right = 0.915789
+anchor_bottom = 0.936842
+rect_min_size = Vector2( 75, 75 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 46 )
+text = "B
+"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pickB2" type="Label" parent="background/AnswerPanel/B/pickB"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 47 )
+text = "B"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="C" type="Button" parent="background/AnswerPanel"]
+margin_left = 250.0
+margin_right = 345.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 95, 95 )
+focus_mode = 0
+action_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 13 )
+flat = true
+icon_align = 1
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pickC" type="Label" parent="background/AnswerPanel/C"]
+anchor_left = 0.0842105
+anchor_top = 0.0947368
+anchor_right = 0.915789
+anchor_bottom = 0.936842
+rect_min_size = Vector2( 75, 75 )
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 46 )
+text = "C"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pickC2" type="Label" parent="background/AnswerPanel/C/pickC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 47 )
+text = "C"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="blockButtons" type="Panel" parent="background"]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color( 1, 1, 1, 0.298039 )
+margin_left = 492.0
+margin_top = 458.0
+margin_right = 980.0
+margin_bottom = 566.0
+custom_styles/panel = SubResource( 79 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lock" type="TextureRect" parent="background/blockButtons"]
+anchor_left = 0.00409836
+anchor_top = 0.0185185
+anchor_right = 0.0819672
+anchor_bottom = 0.37037
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="pausePanel" parent="." instance=ExtResource( 21 )]
+
+[node name="wrongAnswerA" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="wrongAnswerA"]
+self_modulate = Color( 1, 1, 1, 0.698039 )
+anchor_left = 0.0761719
+anchor_top = 0.206667
+anchor_right = 0.412109
+anchor_bottom = 0.791667
+custom_styles/panel = SubResource( 48 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="block" type="Control" parent="wrongAnswerA/Panel"]
+anchor_left = 0.00872088
+anchor_top = 0.0797715
+anchor_right = 0.978483
+anchor_bottom = 0.323978
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel" type="Label" parent="wrongAnswerA/Panel/block"]
+anchor_top = 0.0116664
+anchor_right = 1.00121
+anchor_bottom = 1.00331
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 82 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel2" type="Label" parent="wrongAnswerA/Panel/block"]
+anchor_right = 0.998208
+anchor_bottom = 0.979974
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 81 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel" type="Label" parent="wrongAnswerA/Panel/block/wrongLabel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 80 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="answer" type="Control" parent="wrongAnswerA/Panel"]
+anchor_left = 0.0290697
+anchor_top = 0.415954
+anchor_right = 0.959303
+anchor_bottom = 0.695156
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel" type="Label" parent="wrongAnswerA/Panel/answer"]
+anchor_top = 0.0102041
+anchor_right = 1.0
+anchor_bottom = 1.79592
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 96 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel2" type="Label" parent="wrongAnswerA/Panel/answer"]
+anchor_right = 1.0
+anchor_bottom = 1.76531
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 97 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel" type="Label" parent="wrongAnswerA/Panel/answer/answerLabel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 98 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="wrongBar" type="Panel" parent="wrongAnswerA"]
+anchor_left = 0.550781
+anchor_top = 0.77
+anchor_right = 0.649414
+anchor_bottom = 0.935
+custom_styles/panel = SubResource( 58 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="rightyBar" type="Panel" parent="wrongAnswerA"]
+anchor_left = 0.793945
+anchor_top = 0.766667
+anchor_right = 0.892578
+anchor_bottom = 0.931667
+custom_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="rightBarAnswer" type="Panel" parent="wrongAnswerA"]
+anchor_left = 0.496094
+anchor_top = 0.526667
+anchor_right = 0.916016
+anchor_bottom = 0.605
+custom_styles/panel = SubResource( 60 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongBarAnswer" type="Panel" parent="wrongAnswerA"]
+anchor_left = 0.496094
+anchor_top = 0.373333
+anchor_right = 0.919922
+anchor_bottom = 0.453333
+custom_styles/panel = SubResource( 61 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongAnswerB" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="wrongAnswerB"]
+self_modulate = Color( 1, 1, 1, 0.698039 )
+anchor_left = 0.0761719
+anchor_top = 0.206667
+anchor_right = 0.412109
+anchor_bottom = 0.791667
+custom_styles/panel = SubResource( 48 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongAnswer" type="AudioStreamPlayer" parent="wrongAnswerB/Panel"]
+unique_name_in_owner = true
+stream = ExtResource( 4 )
+bus = "Voices"
+
+[node name="block" type="Control" parent="wrongAnswerB/Panel"]
+anchor_left = 0.00872088
+anchor_top = 0.0797715
+anchor_right = 0.978483
+anchor_bottom = 0.323978
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel" type="Label" parent="wrongAnswerB/Panel/block"]
+anchor_top = 0.0116664
+anchor_right = 1.00121
+anchor_bottom = 1.00331
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 82 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel2" type="Label" parent="wrongAnswerB/Panel/block"]
+anchor_right = 0.998208
+anchor_bottom = 0.979974
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 81 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongLabel" type="Label" parent="wrongAnswerB/Panel/block/wrongLabel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 80 )
+text = "Mali ang napili
+mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="answer" type="Control" parent="wrongAnswerB/Panel"]
+anchor_left = 0.0290698
+anchor_top = 0.415954
+anchor_right = 0.959303
+anchor_bottom = 0.683761
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel" type="Label" parent="wrongAnswerB/Panel/answer"]
+anchor_top = 0.0102041
+anchor_right = 1.0
+anchor_bottom = 1.79592
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 96 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel2" type="Label" parent="wrongAnswerB/Panel/answer"]
+anchor_right = 1.0
+anchor_bottom = 1.76531
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 97 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="answerLabel" type="Label" parent="wrongAnswerB/Panel/answer/answerLabel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 98 )
+text = "Ang tamang sagot sa tanong ay ang letrang 'C' "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rightyBar" type="Panel" parent="wrongAnswerB"]
+anchor_left = 0.794922
+anchor_top = 0.77
+anchor_right = 0.893555
+anchor_bottom = 0.935
+custom_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongBar" type="Panel" parent="wrongAnswerB"]
+anchor_left = 0.672852
+anchor_top = 0.768333
+anchor_right = 0.771485
+anchor_bottom = 0.933333
+custom_styles/panel = SubResource( 58 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="rightBarAnswer" type="Panel" parent="wrongAnswerB"]
+anchor_left = 0.49707
+anchor_top = 0.526667
+anchor_right = 0.911133
+anchor_bottom = 0.605
+custom_styles/panel = SubResource( 60 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongBarAnswer" type="Panel" parent="wrongAnswerB"]
+anchor_left = 0.495117
+anchor_top = 0.446667
+anchor_right = 0.935547
+anchor_bottom = 0.518333
+custom_styles/panel = SubResource( 61 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="correctAnswerC" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="correctAnswerC"]
+self_modulate = Color( 1, 1, 1, 0.698039 )
+anchor_left = 0.0761719
+anchor_top = 0.206667
+anchor_right = 0.412109
+anchor_bottom = 0.791667
+custom_styles/panel = SubResource( 48 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="block" type="Control" parent="correctAnswerC/Panel"]
+anchor_left = 0.00872088
+anchor_top = 0.0797715
+anchor_right = 0.978483
+anchor_bottom = 0.323978
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="correctLabel" type="Label" parent="correctAnswerC/Panel/block"]
+anchor_left = 0.0179857
+anchor_top = 0.524987
+anchor_right = 0.989215
+anchor_bottom = 2.98659
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 93 )
+text = "Tama ang napili mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="correctLabel2" type="Label" parent="correctAnswerC/Panel/block"]
+anchor_left = 0.00899287
+anchor_right = 0.998208
+anchor_bottom = 3.45325
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 94 )
+text = "Tama ang napili mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="correctLabel" type="Label" parent="correctAnswerC/Panel/block/correctLabel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 95 )
+text = "Tama ang napili mong sagot"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="correctAnswer" type="AudioStreamPlayer" parent="correctAnswerC/Panel"]
+unique_name_in_owner = true
+stream = ExtResource( 8 )
+bus = "Voices"
+
+[node name="wrongBar" type="Panel" parent="correctAnswerC"]
+anchor_left = 0.673828
+anchor_top = 0.768333
+anchor_right = 0.772461
+anchor_bottom = 0.933333
+custom_styles/panel = SubResource( 58 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="rightyBar" type="Panel" parent="correctAnswerC"]
+anchor_left = 0.794922
+anchor_top = 0.766667
+anchor_right = 0.893555
+anchor_bottom = 0.931667
+custom_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="rightBarAnswer" type="Panel" parent="correctAnswerC"]
+anchor_left = 0.498047
+anchor_top = 0.531667
+anchor_right = 0.921875
+anchor_bottom = 0.605
+custom_styles/panel = SubResource( 60 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="wrongBarAnswer" type="Panel" parent="correctAnswerC"]
+anchor_left = 0.496094
+anchor_top = 0.445
+anchor_right = 0.933594
+anchor_bottom = 0.518333
+custom_styles/panel = SubResource( 61 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="repeatInfo" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource( 9 )
+bus = "Voices"
+
+[node name="DisplayStars" parent="." instance=ExtResource( 12 )]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="background/pauseButton" to="." method="_on_pauseButton_pressed"]
+[connection signal="pressed" from="background/imageHolder/potato/repeat" to="." method="_on_repeat_pressed"]
+[connection signal="finished" from="background/imageHolder/potato/infoPotato" to="." method="_on_infoPotato_finished"]
+[connection signal="pressed" from="background/AnswerPanel/A" to="." method="_on_A_pressed"]
+[connection signal="pressed" from="background/AnswerPanel/B" to="." method="_on_B_pressed"]
+[connection signal="pressed" from="background/AnswerPanel/C" to="." method="_on_C_pressed"]
+[connection signal="hide" from="pausePanel/bg/x" to="." method="_on_x_hide"]
+[connection signal="visibility_changed" from="wrongAnswerA" to="." method="_on_wrongAnswerA_visibility_changed"]
+[connection signal="visibility_changed" from="wrongAnswerB" to="." method="_on_wrongAnswerB_visibility_changed"]
+[connection signal="visibility_changed" from="correctAnswerC" to="." method="_on_correctAnswerC_visibility_changed"]
+[connection signal="finished" from="repeatInfo" to="." method="_on_repeatInfo_finished"]
+
+[editable path="pausePanel"]
