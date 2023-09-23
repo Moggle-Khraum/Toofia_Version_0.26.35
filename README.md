@@ -5,7 +5,7 @@
 
 :label: **Game Title:** *Toofia: Kasangkapang Tulong Pang-edukasyon*
 
-:desktop_computer: **Language Used:** *Pure GDScript*
+:desktop_computer: **Language Used:** *GDScript*
 
 :hourglass_flowing_sand: **Progress:** *45% out of 100%*
 
