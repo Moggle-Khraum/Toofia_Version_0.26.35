@@ -1,7 +1,7 @@
 # Toofia_Version_0.26.35
-**The main repo for the game, written in GDScript**
+:wrench: :gear: **The main repo for the game, written in GDScript**
 
-:writing_hand: ***Tags:educational games, preschoolers, 2D, GDScript***
+:writing_hand: ***Tags: educational games, preschoolers, 2D, GDScript***
 
 **Game Title:** *Toofia: Kasangkapang Tulong Pang-edukasyon*
 
