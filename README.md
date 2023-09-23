@@ -8,11 +8,11 @@
 **Progress:** *45% out of 100%*
 
 **Completed Goal:**
-- [✓] Add a Persistent Music system that persists even when restarting the game.
-- [✓] Added Name Input and store it locally
-- [✓] Added 1 Level with Two Questions
-- [✓] Added, Modified and Fixed the Reapeat Button of the Question by pressing the image
-- [✓] Add the Blocks of Time's level selection
+- [x] Add a Persistent Music system that persists even when restarting the game.
+- [x] Added Name Input and store it locally
+- [x] Added 1 Level with Two Questions
+- [x] Added, Modified and Fixed the Reapeat Button of the Question by pressing the image
+- [x] Add the Blocks of Time's level selection
 - [  ] 
 - [  ]
 - [  ]
@@ -20,10 +20,10 @@
 - 
 **Next Goal:**
 - [  ] Add a system logic that makes the star display 1, 2 or 3 stars based on the players choice
-- [  ] Implement this system to other levels
-- [  ] Add more questions to Levels
+- [  ] Implement this system to other levels :face_with_spiral_eyes:
+- [  ] Add more questions to Levels :dizzy_face:
 - [  ] TLDR;
-- [  ] Finish the game..
+- [  ] Finish the game.. :tada:
 - more to come...
 
  
@@ -33,14 +33,11 @@
 
 
 <p align="center">
-    <b> The game's Toofia icon:</b><br>
-    <br>
-    <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon">
+    <b> The game's Toofia icon:</b><br> <b>Made with Godot Engine</b><br>
+    <br> 
+    <img width="200" src="Assets/Icons/win7icon.ico" alt="The Icon for the game Toofia" title="Toofia Icon"> <br>  <img width="200" src="Assets/Images/logo_godot.png" alt="Godot Engine Logo" title="Godot Engine">
     
-<p align="center">
-    <b>Made with Godot Engine</b><br>
-    <br>
-    <img width="200" src="Assets/Images/logo_godot.png" alt="Godot Engine Logo" title="Godot Engine">
+   
  
 </p>
 
