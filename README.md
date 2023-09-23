@@ -1,5 +1,6 @@
 # Toofia_Version_0.26.35
- The main repo for the game
+## The main repo for the game
+### Tags: educational games, preschoolers, 2D, GDScript
 
 **Game Title:** *Toofia: Kasangkapang Tulong Pang-edukasyon*
 
