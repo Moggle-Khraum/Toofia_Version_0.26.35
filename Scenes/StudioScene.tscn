@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Images/abs5.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Images/absNew.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/StudioSceneScript.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Themes/loadbar0.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Images/blackScreen.png" type="Texture" id=3]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.101961, 0.101961, 0.109804, 1 )
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1800, 1200 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1800, 1200 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
@@ -17,6 +22,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -24,8 +32,9 @@ expand = true
 anchor_top = 0.516667
 anchor_right = 1.0
 anchor_bottom = 1.00167
-custom_styles/panel = ExtResource( 3 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
@@ -33,7 +42,8 @@ __meta__ = {
 anchor_top = -0.00333333
 anchor_right = 1.0
 anchor_bottom = 0.516667
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }

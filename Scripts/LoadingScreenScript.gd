@@ -6,8 +6,7 @@ var current_progress
 var target_progress
 var loading_speed = 6.1
 
-#For the Spinning Gear
-var speed = 500
+
 # Speed of the rotation
 var angular_speed = PI
 # Angular speed of one full rotation per second
@@ -116,19 +115,18 @@ func check_compatibility():
 			
 		else:
 			# The device is lower than android 6
-			return true # Add this line
+			return true
+			# Add this line
 		
 	elif os_name == "OSX" or os_name == "Windows":
 		#This is macOS|Windows
 		#This is for debugging only and sets the limitation of the device
 		#print("This is macOS or Windows")
-		return false
+		return true
 	
 	else:
 		#Neither Android|Windows|macOS
-		#print("Not Windows|Android|macOS")
-		#put to true for debug
-		return false
+		print("Not Windows|Android|macOS")
 
 
 #isCompatible redirects to MainMenu

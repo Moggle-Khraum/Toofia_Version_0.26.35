@@ -109,6 +109,7 @@ anchor_left = 0.0556641
 anchor_top = 0.0733333
 anchor_right = 0.949219
 anchor_bottom = 0.906667
+mouse_filter = 2
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -198,8 +199,8 @@ anchor_left = 0.0262295
 anchor_top = 0.206
 anchor_right = 0.981421
 anchor_bottom = 0.868
-input_pass_on_modal_close_click = false
-scroll_horizontal_enabled = false
+mouse_filter = 2
+follow_focus = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -209,6 +210,7 @@ __meta__ = {
 margin_right = 862.0
 margin_bottom = 773.0
 rect_clip_content = true
+mouse_filter = 2
 __meta__ = {
 "_edit_lock_": true
 }
@@ -463,36 +465,6 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="exit" type="TextureButton" parent="."]
-anchor_left = 0.446289
-anchor_top = 0.796667
-anchor_right = 0.544922
-anchor_bottom = 0.963333
-focus_mode = 0
-action_mode = 0
-enabled_focus_mode = 0
-texture_normal = ExtResource( 15 )
-texture_pressed = ExtResource( 13 )
-expand = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="TextureRect" type="TextureRect" parent="exit"]
-anchor_left = 0.178218
-anchor_top = 0.15
-anchor_right = 0.831683
-anchor_bottom = 0.85
-mouse_filter = 2
-mouse_default_cursor_shape = 2
-texture = ExtResource( 14 )
-expand = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 69, 56 )
 scale = Vector2( 0.22, 0.22 )
@@ -604,6 +576,35 @@ anchor_top = 0.419048
 anchor_right = 0.0800781
 anchor_bottom = 0.666667
 custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exit" type="TextureButton" parent="."]
+anchor_left = 0.423828
+anchor_top = 0.816667
+anchor_right = 0.521484
+anchor_bottom = 0.978333
+margin_top = 3.05176e-05
+focus_mode = 0
+action_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="exitHome" type="TextureRect" parent="exit"]
+anchor_left = 0.16
+anchor_top = 0.164948
+anchor_right = 0.84
+anchor_bottom = 0.85567
+texture = ExtResource( 14 )
+expand = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true

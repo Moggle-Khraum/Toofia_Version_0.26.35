@@ -1,7 +1,5 @@
 extends Popup
 
-#For the Cogs
-var speed = 500
 # Speed of the rotation
 var angular_speed = PI
 # Angular speed of one full rotation per second
