@@ -397,7 +397,7 @@ __meta__ = {
 
 [node name="blackFade" type="Sprite" parent="."]
 unique_name_in_owner = true
-position = Vector2( 480, 298 )
+position = Vector2( 510, 298 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 4 )
 __meta__ = {
