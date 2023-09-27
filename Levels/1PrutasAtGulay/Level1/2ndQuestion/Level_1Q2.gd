@@ -3,8 +3,8 @@ extends Panel
 signal repeat
 
 #first Question
-const MISTAKE_A2_FILE_PATH = "user://playerData/level1/question1/mistakeA2.gmd"
-const MISTAKE_B2_FILE_PATH = "user://playerData/level1/question1/mistakeB2.gmd"
+const MISTAKE_A2_FILE_PATH = "user://playerData/level1/mistakeA2.gmd"
+const MISTAKE_B2_FILE_PATH = "user://playerData/level1/mistakeB2.gmd"
 
 
 func _ready() -> void:
@@ -45,15 +45,21 @@ func _on_A_pressed():
 	print("Repeat Info Stop")
 	
 	if not hasFileA2():
-		#Creates a script that records the mistake
-		var wrongA2 = File.new()
-		if wrongA2.open(MISTAKE_A2_FILE_PATH, File.WRITE) == OK:
-		# Writes a number inside the Retry File, Retry 1
-			wrongA2.store_string("A2 Mistake")
-			wrongA2.close()
-			print("Mistake A2 File Saved")
+		createA2Wrong()
+		print("Creating FileA2")
+	elif hasFileA2():
+		print("FileA2 Exist")
 	else:
-		print("Not Pressed")
+		print("FileA2 Nonexistent")
+	
+func createA2Wrong():
+	#Creates a script that records the mistake
+	var wrongA2 = File.new()
+	if wrongA2.open(MISTAKE_A2_FILE_PATH, File.WRITE) == OK:
+	# Writes a number inside the Retry File, Retry 1
+		wrongA2.store_string("A2 Mistake")
+		wrongA2.close()
+	print("Mistake A2 File Saved")
 	
 #Checks if the file has this.
 func hasFileA2():
@@ -79,15 +85,21 @@ func _on_B_pressed():
 	print("Repeat Info Stop")
 	
 	if not hasFileB2():
-		print("The file already exist")
-		var wrongB2 = File.new()
-		if wrongB2.open(MISTAKE_B2_FILE_PATH, File.WRITE) == OK:
-		# Writes a number inside the Retry File, Retry 1
-			wrongB2.store_string("B2 Mistake")
-			wrongB2.close()
-			print("Mistake B2 File Saved")
+		createB2Wrong()
+		print('Creating FileB2')
+	elif hasFileB2():
+		print("FileB2 Exists")
 	else:
-		print("Not Pressed")
+		print("FileB2 Nonexistent")
+		
+		
+func createB2Wrong():
+	var wrongB2 = File.new()
+	if wrongB2.open(MISTAKE_B2_FILE_PATH, File.WRITE) == OK:
+	# Writes a number inside the Retry File, Retry 1
+		wrongB2.store_string("B2 Mistake")
+		wrongB2.close()
+	print("Mistake B2 File Saved")
 		
 #Checks if the file has this.
 func hasFileB2():
@@ -122,6 +134,7 @@ func _on_repeat_pressed() -> void:
 	$"%infoPotato".stop()
 	print("Info Potato stop")
 	$'%coverButton'.show()
+	$'%AnswerPanel'.hide()
 	print("Cover Repeat Button")
 	
 func voiceOver():

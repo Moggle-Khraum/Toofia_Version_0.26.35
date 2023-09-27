@@ -3,8 +3,8 @@ extends Panel
 signal repeat
 
 #first Question
-const MISTAKE_A1_FILE_PATH = "user://playerData/level1/question1/mistakeA1.gmd"
-const MISTAKE_C1_FILE_PATH = "user://playerData/level1/question1/mistakeC1.gmd"
+const MISTAKE_A1_FILE_PATH = "user://playerData/level1/mistakeA1.gmd"
+const MISTAKE_C1_FILE_PATH = "user://playerData/level1/mistakeC1.gmd"
 
 func _ready() -> void:
 	#This will play the Voiceover..
@@ -43,17 +43,23 @@ func _on_A_pressed():
 	print("Repeat Info Stop")
 	
 	if not hasFileA1():
-		#Creates a script that records the mistake
-		var wrongA1 = File.new()
-		if wrongA1.open(MISTAKE_A1_FILE_PATH, File.WRITE) == OK:
-		# Writes a number inside the Retry File, Retry 1
-			wrongA1.store_string("A1 Mistake")
-			wrongA1.close()
-			print("Mistake A1 File Saved")
+		createA1Wrong()
+		print("Creating FileA1")
+	elif hasFileA1():
+		print("FileA1 exists")
 	else:
-		print("The file A1 already exist")
+		print("FileA1 Nonexistent")
 		
-			
+func createA1Wrong():
+	#Creates a script that records the mistake
+	var wrongA1 = File.new()
+	if wrongA1.open(MISTAKE_A1_FILE_PATH, File.WRITE) == OK:
+	# Writes a number inside the Retry File, Retry 1
+		wrongA1.store_string("A1 Mistake")
+		wrongA1.close()
+	print("Mistake A1 File Saved")
+	
+	
 func hasFileA1():
 	print("Checking Retry Once file")
 	var wrongA1 = File.new()
@@ -94,17 +100,22 @@ func _on_C_pressed():
 	$"%repeatInfo".stream_paused = true
 	print("Repeat Info Stop")
 	
-	if hasFileC1():
-		#Creates a script that records the mistake
-		var wrongC1 = File.new()
-		if wrongC1.open(MISTAKE_C1_FILE_PATH, File.WRITE) == OK:
-		# Writes a number inside the Retry File, Retry 1
-			wrongC1.store_string("C1 Mistake")
-			wrongC1.close()
-			print("Mistake C1 File Saved")
+	if not hasFileC1():
+		createC1Wrong()
+		print('Creating FileC1')
+	elif hasFileC1():
+		print("FileC1 Exists")
 	else:
-		print("The file C1 already exist")
-		
+		print("FileC1 Nonexistent")
+			
+func createC1Wrong():
+	#Creates a script that records the mistake
+	var wrongC1 = File.new()
+	if wrongC1.open(MISTAKE_C1_FILE_PATH, File.WRITE) == OK:
+	# Writes a number inside the Retry File, Retry 1
+		wrongC1.store_string("C1 Mistake")
+		wrongC1.close()
+	print("Mistake C1 File Saved")
 			
 #Checks if there's a C1 File
 func hasFileC1():
@@ -128,15 +139,16 @@ func _on_repeat_pressed() -> void:
 	emit_signal("repeat")
 	print("Emits Signal")
 	$"%infoApple".stop()
-	print("Info Coconut stop")
+	print("Info Apple stop")
 	$'%coverButton'.show()
+	$'%AnswerPanel'.hide()
 	print("Hide Repeat Button")
 	
 func voiceOver():
-	#if self.has_signal('PlayCoconut'):
+	#if self.has_signal('Play InfoApple'):
 	yield(get_tree().create_timer(0.5), "timeout")
 	$'%infoApple'.play()
-	print("Plays Coconut")
+	print("Plays infoApple")
 	print("Hides Repeat Button")
 	
 
