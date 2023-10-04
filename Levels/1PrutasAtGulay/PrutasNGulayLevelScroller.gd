@@ -32,158 +32,6 @@ func _on_GoBackButton_pressed() -> void:
 
 ################################################################################################
 # THIS IS FOR THE LEVELS, THE BUTTONS OF LEVELS
-#
-# THIS WILL CREATE THE FOLDER THAT STORES THIS LEVEL'S SCRIPTS
-func createPlayerData1():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level1/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level1 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData2():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level2/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level2 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData3():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level3/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level3 Data Done!")
-	print("Folder Created..")
-
-func createPlayerData4():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level4/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level4 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData5():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level5/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level5 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData6():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level6/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level6 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData7():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level7/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level7 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData8():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level8/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level8 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData9():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level9/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level9 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData10():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level10/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level10 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData11():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level11/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level11 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData12():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level12/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level12 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData13():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level13/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level13 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData14():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level14/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level14 Data Done!")
-	print("Folder Created..")
-	
-func createPlayerData15():
-	print("Creating..")
-	# Ensure the configuration folder exists
-	var data_dir = "user://playerData/level15/1stQuestion"
-	var dir = Directory.new()
-	if not dir.dir_exists(data_dir):
-		dir.make_dir_recursive(data_dir)
-		print("Level15 Data Done!")
-	print("Folder Created..")
-
 
 #UPPER ROW BUTTONS
 # THIS IS LEVEL 1
@@ -193,9 +41,11 @@ func _on_1Button_pressed() -> void:
 	var level1 = get_tree().change_scene("res://Levels/1PrutasAtGulay/Level1/1stQuestion/Level_1Q1.tscn")
 	emit_signal('pressed')
 	print ("You are now at Level 1")
-	createPlayerData1()
+	
+	var playerdata = PlayerData.new()
+	playerdata.createPlayerData1()
+	
 	print ("You are now at Level 1")
-	#emit_signal('PlayCoconut')
 	MainMenuThemePlayer.stop()
 
 # THIS IS LEVEL 2
@@ -205,7 +55,10 @@ func _on_2Button_pressed() -> void:
 	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 2")
-	createPlayerData2()
+	
+	var playerdata2 = PlayerData2.new()
+	playerdata2.createPlayerData2()
+	
 	print ("You are now at Level 2")
 	
 # THIS IS LEVEL 3
@@ -360,5 +213,164 @@ func _on_hide_pressed() -> void:
 	MenuClickSfxPlayer.play()
 	$'%bgPanel'.hide()
 	print("Hides LevelLock")
+
+
+#===============================================
+# THIS WILL CREATE THE FOLDER THAT STORES THIS LEVEL'S SCRIPTS
+class PlayerData:
+	func createPlayerData1():
+		print("Creating..")
+		# Ensure the configuration folder exists
+		var data_dir = "user://playerData/level1/1stQuestion"
+		var dir = Directory.new()
+		if not dir.dir_exists(data_dir):
+			dir.make_dir_recursive(data_dir)
+			print("Level1 Data Done!")
+		print("Folder Created..")
+
+class PlayerData2 extends PlayerData:
+	func createPlayerData2():
+		print("Creating..")
+		# Ensure the configuration folder exists
+		var data_dir = "user://playerData/level2/2ndQuestion"
+		var dir = Directory.new()
+		if not dir.dir_exists(data_dir):
+			dir.make_dir_recursive(data_dir)
+			print("Level2 Data Done!")
+		print("Folder Created..")
+
+
+
+
+	
+func createPlayerData3():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level3/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level3 Data Done!")
+	print("Folder Created..")
+
+func createPlayerData4():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level4/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level4 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData5():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level5/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level5 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData6():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level6/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level6 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData7():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level7/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level7 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData8():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level8/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level8 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData9():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level9/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level9 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData10():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level10/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level10 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData11():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level11/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level11 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData12():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level12/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level12 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData13():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level13/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level13 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData14():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level14/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level14 Data Done!")
+	print("Folder Created..")
+	
+func createPlayerData15():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level15/1stQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("Level15 Data Done!")
+	print("Folder Created..")
 
 

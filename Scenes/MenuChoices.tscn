@@ -630,7 +630,7 @@ __meta__ = {
 anchor_left = 0.162205
 anchor_top = 0.0153846
 anchor_right = 0.822824
-anchor_bottom = 0.907692
+anchor_bottom = 0.907694
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 1
@@ -649,8 +649,9 @@ __meta__ = {
 
 [node name="backLabel" type="Label" parent="gobackCage/GoBackButton/backLabel"]
 anchor_left = 0.03125
-anchor_right = 0.982143
-anchor_bottom = 0.931035
+anchor_top = -0.0344828
+anchor_right = 0.964286
+anchor_bottom = 0.931034
 custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 3
 custom_constants/shadow_offset_y = 5
@@ -702,7 +703,6 @@ unique_name_in_owner = true
 
 [node name="PrutasAtGulay" parent="." instance=ExtResource( 12 )]
 unique_name_in_owner = true
-visible = false
 
 [connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice1/CardMenu1" to="." method="_on_CardMenu1_pressed"]
 [connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice2/CardMenu2" to="." method="_on_CardMenu2_pressed"]

@@ -3,8 +3,8 @@ extends Panel
 signal repeat
 
 #first Question
-const MISTAKE_A2_FILE_PATH = "user://playerData/level1/mistakeA2.gmd"
-const MISTAKE_B2_FILE_PATH = "user://playerData/level1/mistakeB2.gmd"
+const MISTAKE_A2_FILE_PATH = "user://playerData/level1/2ndQuestion/mistakeA2.gmd"
+const MISTAKE_B2_FILE_PATH = "user://playerData/level1/2ndquestion/mistakeB2.gmd"
 
 
 func _ready() -> void:
@@ -113,7 +113,7 @@ func _on_C_pressed():
 	print('The Answer is Correct!')
 	CorrectAnswer.play()
 	$background/imageText.hide()
-	$wrongAnswerC.show()
+	$correctAnswerC.show()
 	$background/pauseButton.hide()
 	$"%potato".hide()
 	print('Pressed C, Wrong Answer')
@@ -155,19 +155,19 @@ func _on_infoPotato_finished() -> void:
 func _on_wrongAnswerA_visibility_changed():
 	$'%wrongAnswer'.play()
 	print("Plays Wrong Answer")
-	yield(get_tree().create_timer(1.10), "timeout")
+	yield(get_tree().create_timer(1.60), "timeout")
 	$'%DisplayStars'.show()
 
 func _on_wrongAnswerB_visibility_changed():
 	$'%wrongAnswer'.play()
 	print("Plays Wrong Answer")
-	yield(get_tree().create_timer(1.10), "timeout")
+	yield(get_tree().create_timer(1.60), "timeout")
 	$'%DisplayStars'.show()
 	
 func _on_correctAnswerC_visibility_changed():
 	$'%correctAnswer'.play()
 	print("Plays Correct")
-	yield(get_tree().create_timer(1.10), "timeout")
+	yield(get_tree().create_timer(1.60), "timeout")
 	$'%DisplayStars'.show()
 	
 

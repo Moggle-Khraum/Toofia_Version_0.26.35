@@ -3,8 +3,8 @@ extends Panel
 signal repeat
 
 #first Question
-const MISTAKE_A1_FILE_PATH = "user://playerData/level1/mistakeA1.gmd"
-const MISTAKE_C1_FILE_PATH = "user://playerData/level1/mistakeC1.gmd"
+const MISTAKE_A1_FILE_PATH = "user://playerData/level1/1stQuestion/mistakeA1.gmd"
+const MISTAKE_C1_FILE_PATH = "user://playerData/level1/1stQuestion/mistakeC1.gmd"
 
 func _ready() -> void:
 	#This will play the Voiceover..
@@ -36,13 +36,14 @@ func _on_A_pressed():
 	$"%apple".hide()
 	print("Pressed A, wrong Answer")
 	_on_wrongAnswerA_visibility_changed()
+	createNextQuestion()
 	
 	$"%infoApple".stream_paused = true
 	print("Info Apple Stop")
 	$"%repeatInfo".stream_paused = true
 	print("Repeat Info Stop")
 	
-	if not hasFileA1():
+	if !hasFileA1():
 		createA1Wrong()
 		print("Creating FileA1")
 	elif hasFileA1():
@@ -76,6 +77,7 @@ func _on_B_pressed():
 	$"%apple".hide()
 	print("Pressed B, Correct Answer")
 	_on_correctAnswerB_visibility_changed()
+	createNextQuestion()
 	
 	$"%infoApple".stream_paused = true
 	print("Info Apple Stop")
@@ -94,6 +96,7 @@ func _on_C_pressed():
 	$"%apple".hide()
 	print('Pressed C, Wrong Answer')
 	_on_wrongAnswerC_visibility_changed()
+	createNextQuestion()
 	
 	$"%infoApple".stream_paused = true
 	print("Info Apple Stop")
@@ -199,6 +202,16 @@ func _on_repeatInfo_finished():
 		print("Hide Lock")
 	
 
-
+#================================
+# THIS WILL CREATE THE FOLDER THAT STORES THIS LEVEL'S SCRIPTS
+func createNextQuestion():
+	print("Creating..")
+	# Ensure the configuration folder exists
+	var data_dir = "user://playerData/level1/2ndQuestion"
+	var dir = Directory.new()
+	if not dir.dir_exists(data_dir):
+		dir.make_dir_recursive(data_dir)
+		print("2nd Q Folder Done!")
+	print("Folder Created..")
 
 
