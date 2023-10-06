@@ -1409,17 +1409,6 @@ unique_name_in_owner = true
 stream = ExtResource( 8 )
 bus = "Voices"
 
-[node name="wrongBar" type="Panel" parent="correctAnswerC"]
-anchor_left = 0.673828
-anchor_top = 0.768333
-anchor_right = 0.772461
-anchor_bottom = 0.933333
-custom_styles/panel = SubResource( 58 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
 [node name="rightyBar" type="Panel" parent="correctAnswerC"]
 anchor_left = 0.794922
 anchor_top = 0.766667
@@ -1437,17 +1426,6 @@ anchor_top = 0.531667
 anchor_right = 0.921875
 anchor_bottom = 0.605
 custom_styles/panel = SubResource( 60 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="wrongBarAnswer" type="Panel" parent="correctAnswerC"]
-anchor_left = 0.496094
-anchor_top = 0.445
-anchor_right = 0.933594
-anchor_bottom = 0.518333
-custom_styles/panel = SubResource( 61 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true

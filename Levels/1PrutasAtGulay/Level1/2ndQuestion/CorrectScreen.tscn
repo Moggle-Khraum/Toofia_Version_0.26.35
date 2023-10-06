@@ -47,19 +47,15 @@ func starDisplay():
 #=============================================================
 	#Check if there's a retry: Retry 1 and Retry 2
 	#Checks if this is the First Retry
-	if hasRetryFileOnce() and not hasRetryFileTwice():
+	var retry = File.new()
+	if retry.file_exists(RETRY_ONCE_FILE_PATH):
 		$'%star2_2'.hide()
 		print(\"Displays Two Stars\")
-	else:
-		print(\"Retry 1 Check Error\")
-		
 	#Checks if this is the Second Retry
-	if hasRetryFileOnce() and hasRetryFileTwice():
+	elif retry.file_exists(RETRY_ONCE_FILE_PATH) and retry.file_exists(RETRY_TWICE_FILE_PATH):
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Star\")
-	else:
-		print('Retry 1 & 2 Check Error')
 #=============================================================
 
 #============================================================
@@ -68,194 +64,79 @@ func starDisplay():
 	
 	#This is when the first Question is Wrong and the Second Question is Correct
 	#Display Two Stars
-	if hasMistakeAtFirstQuestionA1() and not hasMistakeAtSecondQuestionA2():
-		print(\"Question 1 Wrong - A1, Question 2 Correct - No A2\")
-		$'%star2_2'.hide()
+	var file = File.new()
+	if file.file_exists(MISTAKE_A1_FILE_PATH):
+		print(\"Question 1 Wrong - A1\")
+		$'%star1_1'.hide()
 		print(\"Displays Two Stars\")
 	
 	#This is when the first Question is Wrong and the Second Question is wrong
 	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionA2():
+	elif file.file_exists(MISTAKE_A1_FILE_PATH) and file.file_exists(MISTAKE_A2_FILE_PATH):
 		print(\"Question 1 Wrong - A1, Question 2 Correct - No A2\")
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Star\")
-	else:
-		print('Display Error')
-		
-	#===========================================================================
-	#This is when the first Question is Wrong and the Second Question is Correct
-	#Display Two Stars
-	if hasMistakeAtFirstQuestionA1() and not hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Wrong - A1, Question 2 Correct - No B2\")
-		$'%star1_1'.hide()
-		print(\"Displays Two Stars\")
 	
+	#===========================================================================
 	#This is when the first Question is Wrong and the Second Question is wrong
 	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionB2():
+	elif file.file_exists(MISTAKE_A1_FILE_PATH) and file.file_exists(MISTAKE_B2_FILE_PATH):
 		print(\"Question 1 Wrong - A1, Question 2 Correct - No B2\")
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
 		
 	#================================================================================
-	
 	#This is when the first Question is Wrong and the Second Question is Correct
 	#Display Two Stars
-	if hasMistakeAtFirstQuestionC1() and not hasMistakeAtSecondQuestionA2():
+	if file.file_exists(MISTAKE_C1_FILE_PATH):
 		print(\"Question 1 Wrong - C1, Question 2 Correct - No A2\")
 		$'%star1_1'.hide()
 		print(\"Displays Two Stars\")
 		
 	#This is when the first Question is Wrong and the Second Question is wrong
 	#Display One Stars
-	elif hasMistakeAtFirstQuestionC1() and hasMistakeAtSecondQuestionA2():
+	elif file.file_exists(MISTAKE_C1_FILE_PATH) and file.file_exists(MISTAKE_A2_FILE_PATH):
 		print(\"Question 1 Wrong - C1, Question 2 Correct - No A2\")
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
 		
 	#====================================================================================
-		
-	#This is when the first Question is Wrong and the Second Question is Correct
-	#Display Two Stars
-	if hasMistakeAtFirstQuestionC1() and not hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Wrong - C1, Question 2 Correct, No B2\")
-		$'%star1_1'.hide()
-		print(\"Displays Two Stars\")
-	
 	#This is when the first Question is Wrong and the Second Question is wrong
 	#Display One Stars
-	elif hasMistakeAtFirstQuestionC1() and hasMistakeAtSecondQuestionB2():
+	elif file.file_exists(MISTAKE_C1_FILE_PATH) and file.file_exists(MISTAKE_B2_FILE_PATH):
 		print(\"Question 1 Wrong - C1, Question 2 Correct, No B2\")
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
 		
 	#==============================================================
-	
 	#This is when the first Question is Correct and the Second Question is Wrong
 	#Display Two Stars
-	if not hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionA2():
+	if file.file_exists(MISTAKE_A2_FILE_PATH) and file.file_exists(MISTAKE_A2_FILE_PATH):
 		print(\"Question 1 Correct - No A1, Question 2 Wrong - A2\")
 		$'%star1_1'.hide()
 		print(\"Displays Two Stars\")
-	
-	#This is when the first Question is Wrong and the Second Question is wrong
-	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionA2():
-		print(\"Question 1 Correct - No A1, Question 2 Wrong - A2\")
-		$'%star2_2'.hide()
-		$'%star1_1'.hide()
-		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
 		
 	#=========================================================================
 	
 	#This is when the first Question is Correct and the Second Question is Wrong
 	#Display Two Stars
-	if not hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Correct - No A1, Question 2 Wrong - B2\")
+	if file.file_exists(MISTAKE_B2_FILE_PATH):
+		print(\"Question 1 Correct - No A1|C1, Question 2 Wrong - B2\")
 		$'%star1_1'.hide()
 		print(\"Displays Two Stars\")
 	
 	#This is when the first Question is Wrong and the Second Question is wrong
 	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Correct - No A1, Question 2 Wrong - B2\")
+	elif file.file_exists(MISTAKE_A1_FILE_PATH) and file.file_exists(MISTAKE_B2_FILE_PATH):
+		print(\"Question 1 Wrong - A1, Question 2 Wrong - B2\")
 		$'%star2_2'.hide()
 		$'%star1_1'.hide()
 		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
-		
-	#============================================================================
-	
-	#This is when the first Question is Correct and the Second Question is Wrong
-	#Display Two Stars
-	if not hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionA2():
-		print(\"Question 1 Correct - No A1, Question 2 Wrong - A2\")
-		$'%star1_1'.hide()
-		print(\"Displays Two Stars\")
-	
-	#This is when the first Question is Wrong and the Second Question is wrong
-	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionA2():
-		print(\"Question 1 Correct - No A1, Question 2 Wrong - A2\")
-		$'%star2_2'.hide()
-		$'%star1_1'.hide()
-		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
-		
-	#===============================================================================
-	
-	#This is when the first Question is Correct and the Second Question is Wrong
-	#Display Two Stars
-	if not hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Correct - No C1, Question 2 Wrong - B2\")
-		$'%star1_1'.hide()
-		print(\"Displays Two Stars\")
-	
-	#This is when the first Question is Wrong and the Second Question is wrong
-	#Display One Stars
-	elif hasMistakeAtFirstQuestionA1() and hasMistakeAtSecondQuestionB2():
-		print(\"Question 1 Correct - No C1, Question 2 Wrong - B2\")
-		$'%star2_2'.hide()
-		$'%star1_1'.hide()
-		print(\"Displays One Stars\")
-		
-	else:
-		print('Display Error')
-		
 	#============================================================================================
-	
-
-#First Question
-#When Player choose A
-func hasMistakeAtFirstQuestionA1():
-	print(\"Checking Mistake Q1 file\")
-	var misOnce = File.new()
-	print(\"Mistake A1 File Exitst\")
-	return misOnce.file_exists(MISTAKE_A1_FILE_PATH)
-	
-#When Player choose C
-func hasMistakeAtFirstQuestionC1():
-	print(\"Checking Mistake Q1 file\")
-	var misOnce = File.new()
-	print(\"Mistake C1 File Exitst\")
-	return misOnce.file_exists(MISTAKE_C1_FILE_PATH)
-
-#=========================================================================
-
-#Second Question
-#When Player choose A
-func hasMistakeAtSecondQuestionA2():
-	print(\"Checking Mistake Q2 file\")
-	var misTwice = File.new()
-	print(\"Mistake A2 File Exitst\")
-	return misTwice.file_exists(MISTAKE_A2_FILE_PATH)
-	
-#When Player choose B
-func hasMistakeAtSecondQuestionB2():
-	print(\"Checking Mistake Q2 file\")
-	var misTwice = File.new()
-	print(\"Mistake B2 File Exitst\")
-	return misTwice.file_exists(MISTAKE_B2_FILE_PATH)
 	
 
 ###########################################
@@ -271,33 +152,17 @@ func _on_retry_pressed() -> void:
 	yield(get_tree().create_timer(0.50), \"timeout\")
 	var retryScene = get_tree().change_scene(\"res://Levels/1PrutasAtGulay/Level1/1stQuestion/Level_1Q1.tscn\")
 	
-	if hasRetryFileOnce() and not hasRetryFileTwice():
+	var checkRetry = File.new()
+	if checkRetry.file_exists(RETRY_ONCE_FILE_PATH):
 		createScriptOnce_file()
 		deleteMistakes()
 		print(\"Creating Once Retry File\")
 		
-	elif hasRetryFileOnce() and hasRetryFileTwice():
+	elif checkRetry.file_exists(RETRY_ONCE_FILE_PATH) and checkRetry.file_exists(RETRY_TWICE_FILE_PATH):
 		createScriptTwice_file()
 		deleteMistakes()
 		print(\"Creating Twice Retry File\")
-		
-	else:
-		print(\"No Retries has Happened\")
 	
-
-#This is for CHECKING of the retry script file, No. of Retries: 1
-func hasRetryFileOnce():
-	print(\"Checking Retry Once file\")
-	var configOnce = File.new()
-	print(\"Retry File Exitst\")
-	return configOnce.file_exists(RETRY_ONCE_FILE_PATH)
-	
-#This is for CHECKING of the retry script file, No. of Retries: 1
-func hasRetryFileTwice():
-	print(\"Checking Retry Once file\")
-	var configTwice = File.new()
-	print(\"Retry File Exitst\")
-	return configTwice.file_exists(RETRY_TWICE_FILE_PATH)
 	
 #This is for CREATION of the retry script file, No. of Retries: 1
 func createScriptOnce_file():
