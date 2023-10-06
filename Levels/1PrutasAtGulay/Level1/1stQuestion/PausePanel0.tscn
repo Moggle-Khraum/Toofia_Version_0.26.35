@@ -9,7 +9,7 @@
 [ext_resource path="res://Assets/ButtonsIcons/IconButton_Small_Red_Circle.png" type="Texture" id=7]
 [ext_resource path="res://Assets/BoxesBanners/Box_Orange_Rounded.png" type="Texture" id=8]
 [ext_resource path="res://Assets/UIElements/Icon_Menu.png" type="Texture" id=9]
-[ext_resource path="res://Levels/MgaHayopSaBukid/Level1/1stQuestion/PausePanel0MHsB.gd" type="Script" id=10]
+[ext_resource path="res://Levels/1PrutasAtGulay/Level1/1stQuestion/PausePanel0.gd" type="Script" id=10]
 [ext_resource path="res://Levels/1PrutasAtGulay/PrutasAtGulayLevel.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/UIElements/Icon_Return.png" type="Texture" id=12]
 
@@ -675,7 +675,6 @@ __meta__ = {
 
 [node name="PrutasAtGulay" parent="." instance=ExtResource( 11 )]
 unique_name_in_owner = true
-visible = false
 
 [connection signal="pressed" from="bg/box/pausePanel/goLevels/levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="bg/box/pausePanel/goMainMenu/home" to="." method="_on_home_pressed"]

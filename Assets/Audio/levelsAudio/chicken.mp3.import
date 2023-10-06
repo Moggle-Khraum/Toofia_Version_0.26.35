@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chicken.mp3-355fb69eebec0e49a0ea6837d689e145.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/chicken.mp3"
+dest_files=[ "res://.import/chicken.mp3-355fb69eebec0e49a0ea6837d689e145.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

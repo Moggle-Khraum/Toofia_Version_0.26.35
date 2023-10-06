@@ -2,10 +2,9 @@ extends Popup
 
 func _on_levels_pressed() -> void:
 	MenuClickSfxPlayer.play()
-	$'%PrutasAtGulay'.show()
+	$'%MgaHayopSaBukid'.show()
 	#This will go to level selection
 	print("To Levels")
-	MainMenuThemePlayer.play()
 
 func _on_home_pressed() -> void:
 	#This will go straight to the main menu
@@ -18,7 +17,7 @@ func _on_home_pressed() -> void:
 
 func _on_topics_pressed():
 	MenuClickSfxPlayer.play()
-	var toMainMenu = get_tree().change_scene("res://Scenes/MenuChoices.tscn")
+	var toMenuChoices = get_tree().change_scene("res://Scenes/MenuChoices.tscn")
 	print("To Home")
 	
 func _on_x_pressed() -> void:
