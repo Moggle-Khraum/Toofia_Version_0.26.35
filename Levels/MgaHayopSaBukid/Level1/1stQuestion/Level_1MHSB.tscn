@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
@@ -21,7 +21,7 @@
 [ext_resource path="res://Assets/Audio/levelsAudio/appleWrong.mp3" type="AudioStream" id=19]
 [ext_resource path="res://Assets/Audio/correctAnswer.mp3" type="AudioStream" id=20]
 [ext_resource path="res://Assets/Audio/repeatInfo.mp3" type="AudioStream" id=21]
-[ext_resource path="res://Assets/Audio/levelsAudio/chickenInfo.mp3" type="AudioStream" id=22]
+[ext_resource path="res://Assets/Audio/levelsAudio/manok.mp3" type="AudioStream" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -113,23 +113,6 @@ size = 20
 outline_size = 2
 outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
 use_filter = true
-font_data = ExtResource( 13 )
-fallback/0 = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=13]
-size = 20
-outline_size = 2
-outline_color = Color( 0.235294, 0.235294, 0.235294, 1 )
-use_filter = true
-extra_spacing_bottom = -13
-font_data = ExtResource( 13 )
-fallback/0 = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=14]
-size = 20
-use_filter = true
-extra_spacing_top = 3
-extra_spacing_bottom = -13
 font_data = ExtResource( 13 )
 fallback/0 = ExtResource( 2 )
 
@@ -699,6 +682,8 @@ anchor_bottom = 0.886704
 margin_left = -3.05176e-05
 margin_top = -4.57764e-05
 margin_bottom = -6.10352e-05
+focus_mode = 0
+enabled_focus_mode = 0
 flat = true
 __meta__ = {
 "_edit_lock_": true,
@@ -728,7 +713,7 @@ bus = "Voices"
 [node name="chickenVoice" type="AudioStreamPlayer" parent="background/imageHolder/chicken"]
 unique_name_in_owner = true
 stream = ExtResource( 12 )
-bus = "Voices"
+bus = "SFX"
 
 [node name="imageText" type="TextureRect" parent="background"]
 anchor_left = 0.0664063
@@ -819,7 +804,7 @@ custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 8 )
-text = "1. Batay sa iyong narinig, ang nasa larawan ba, ay isang Gulay o Prutas?"
+text = "1. Batay sa iyong narinig, ano ang pangalan ng hayop?"
 valign = 1
 autowrap = true
 clip_text = true
@@ -838,8 +823,7 @@ custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 9 )
-text = "1. Batay sa iyong narinig,
-ang nasa larawan ba, ay isang Gulay o Prutas?"
+text = "1. Batay sa iyong narinig, ano ang pangalan ng hayop?"
 valign = 1
 autowrap = true
 clip_text = true
@@ -858,7 +842,7 @@ custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 10 )
-text = "A. Ito po ay isang Gulay."
+text = "A. Ito po ay isang Manok."
 align = 1
 valign = 1
 autowrap = true
@@ -876,7 +860,7 @@ custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 11 )
-text = "A. ito po ay isang gulay."
+text = "A. ito po ay isang Manok."
 align = 1
 valign = 1
 autowrap = true
@@ -896,7 +880,7 @@ custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 12 )
-text = "B. Ito po ay isang Prutas."
+text = "B. Ito po ay isang Kambing."
 align = 1
 valign = 1
 autowrap = true
@@ -914,7 +898,7 @@ custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 11 )
-text = "B. ito po ay isang prutas."
+text = "B. ito po ay isang kambing."
 align = 1
 valign = 1
 autowrap = true
@@ -925,45 +909,40 @@ __meta__ = {
 }
 
 [node name="answerLabelC" type="Label" parent="background/askHolder"]
-anchor_left = 0.049801
-anchor_top = 0.646724
-anchor_right = 0.872509
-anchor_bottom = 0.766382
+anchor_left = 0.0657373
+anchor_top = 0.675214
+anchor_right = 0.850597
+anchor_bottom = 0.766383
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
-custom_fonts/font = SubResource( 13 )
-text = "C. Wala sa mga pagpipilian"
+custom_fonts/font = SubResource( 12 )
+text = "C. Wala sa mga Pagpipilian."
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="answerLabelC2" type="Label" parent="background/askHolder/answerLabelC"]
-anchor_left = 0.0260116
-anchor_top = 0.02
-anchor_right = 0.979769
-anchor_bottom = 1.2
+[node name="answerLabelC" type="Label" parent="background/askHolder/answerLabelC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 1
-custom_fonts/font = SubResource( 14 )
-text = "C. Wala sa mga pagpipilian
-"
+custom_fonts/font = SubResource( 11 )
+text = "C. Wala sa mga Pagpipilian."
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
+"_edit_lock_": true
 }
 
 [node name="AnswerPanel" type="HBoxContainer" parent="background"]
@@ -1467,10 +1446,10 @@ anchor_left = 0.510638
 anchor_top = 0.170731
 anchor_right = 1.47872
 anchor_bottom = 1.19512
-margin_left = -4.19617e-05
-margin_top = 2.19345e-05
-margin_right = -4.57764e-05
-margin_bottom = 1.52588e-05
+margin_left = 48.0
+margin_top = 14.0
+margin_right = 230.0
+margin_bottom = 182.0
 texture = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -1616,10 +1595,10 @@ anchor_left = 0.510638
 anchor_top = 0.170731
 anchor_right = 1.47872
 anchor_bottom = 1.19512
-margin_left = -4.19617e-05
-margin_top = 2.19345e-05
-margin_right = -4.57764e-05
-margin_bottom = 2.28882e-05
+margin_left = 48.0
+margin_top = 14.0
+margin_right = 230.0
+margin_bottom = 182.0
 texture = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -1997,6 +1976,7 @@ bus = "Voices"
 
 [connection signal="pressed" from="background/pauseButton" to="." method="_on_pauseButton_pressed"]
 [connection signal="pressed" from="background/imageHolder/chicken/repeat" to="." method="_on_repeat_pressed"]
+[connection signal="finished" from="background/imageHolder/chicken/infoChicken" to="." method="_on_infoChicken_finished"]
 [connection signal="finished" from="background/imageHolder/chicken/chickenVoice" to="." method="_on_chickenVoice_finished"]
 [connection signal="pressed" from="background/AnswerPanel/A" to="." method="_on_A_pressed"]
 [connection signal="pressed" from="background/AnswerPanel/B" to="." method="_on_B_pressed"]

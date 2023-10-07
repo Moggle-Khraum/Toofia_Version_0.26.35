@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/choiceAGulay.mp3-470598b9427c98393e8336e2a241e70d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/choiceAGulay.mp3"
+dest_files=[ "res://.import/choiceAGulay.mp3-470598b9427c98393e8336e2a241e70d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

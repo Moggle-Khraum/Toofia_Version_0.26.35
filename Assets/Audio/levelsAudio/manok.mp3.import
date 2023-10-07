@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/manok.mp3-a1493f3682f91943f29791d4b5c5c45c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/manok.mp3"
+dest_files=[ "res://.import/manok.mp3-a1493f3682f91943f29791d4b5c5c45c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

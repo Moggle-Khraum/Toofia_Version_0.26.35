@@ -693,7 +693,6 @@ __meta__ = {
 
 [node name="MgaHayopSaBukid" parent="." instance=ExtResource( 13 )]
 unique_name_in_owner = true
-visible = false
 
 [node name="PagguhitNgAlpabeto" parent="." instance=ExtResource( 14 )]
 unique_name_in_owner = true

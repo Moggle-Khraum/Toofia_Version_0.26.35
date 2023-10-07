@@ -157,13 +157,41 @@ func voiceOver():
 
 func _on_infoApple_finished() -> void:
 	yield(get_tree().create_timer(0.10), "timeout")
-	$'%repeatInfo'.play()
+	$'%askVoice'.play()
 	print("Play Repeat Info")
-	$"%AnswerPanel".show()
-	$"%blockButtons".show()
-	print("Shows Answer Panel, Show Block Buttons")
 
+func _on_askVoice_finished() -> void:
+	yield(get_tree().create_timer(0.10), "timeout")
+	$'%choiceA'.play()
+	$'%A'.show()
+	yield(get_tree().create_timer(0.8), "timeout")
 
+func _on_choiceA_finished() -> void:
+	yield(get_tree().create_timer(0.10), "timeout")
+	$'%choiceB'.play()
+	$'%B'.show()
+	$'%A'.hide()
+	yield(get_tree().create_timer(0.8), "timeout")
+
+func _on_choiceB_finished() -> void:
+	yield(get_tree().create_timer(0.10), "timeout")
+	$'%choiceC'.play()
+	$'%C'.show()
+	$'%A'.hide()
+	$'%B'.hide()
+	yield(get_tree().create_timer(0.8), "timeout")
+	
+func _on_choiceC_finished() -> void:
+	yield(get_tree().create_timer(0.10), "timeout")
+	$'%pickAnswer'.play()
+	$'%A'.show()
+	$'%B'.show()
+
+func _on_pickAnswer_finished() -> void:
+	yield(get_tree().create_timer(0.10), "timeout")
+	$'%repeatInfo'.play()
+
+#==================================================
 func _on_wrongAnswerA_visibility_changed():
 	$"%animA".play("downArrow")
 	print("Plays UpDown Arrow")
@@ -187,6 +215,7 @@ func nextQuestionVoice():
 	yield(get_tree().create_timer(0.35), "timeout")
 	$"%wrongQuestion".play()
 	print("Play Next Question Voice")
+
 
 
 func _on_repeatInfo_finished():
@@ -213,5 +242,13 @@ func createNextQuestion():
 		dir.make_dir_recursive(data_dir)
 		print("2nd Q Folder Done!")
 	print("Folder Created..")
+
+
+
+
+
+
+
+
 
 

@@ -40,10 +40,13 @@ func _on_GoBackButton_pressed() -> void:
 func _on_1Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 1")
-	var level1 = get_tree().change_scene("res://Levels/MgaHayopSaBukid/Level1/1stQuestion/Level_1Q0MHsB.tscn")
+	var level1 = get_tree().change_scene("res://Levels/MgaHayopSaBukid/Level1/1stQuestion/Level_1MHSB.tscn")
 	emit_signal('pressed')
 	print ("You are now at Level 1")
-
+	
+	print ("You are now at Level 1")
+	MainMenuThemePlayer.stop()
+	
 # THIS IS LEVEL 2
 func _on_2Button_pressed() -> void:
 	LevelsButtons.play()

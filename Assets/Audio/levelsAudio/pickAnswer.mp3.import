@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pickAnswer.mp3-f57715d8b45df396b47cf1f55cf6645f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/pickAnswer.mp3"
+dest_files=[ "res://.import/pickAnswer.mp3-f57715d8b45df396b47cf1f55cf6645f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
