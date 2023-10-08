@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Assets/UIIcons/Icon_Small_Blank_Pause.png" type="Texture" id=1]
 [ext_resource path="res://Assets/GUI/Item2.png" type="Texture" id=2]
@@ -21,8 +21,10 @@
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=19]
 [ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=20]
 [ext_resource path="res://Levels/1PrutasAtGulay/Level1/1stQuestion/PausePanel0.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Assets/Audio/levelsAudio/applePrutas.mp3" type="AudioStream" id=22]
+[ext_resource path="res://Assets/Audio/levelsAudio/askVoice.wav" type="AudioStream" id=22]
 [ext_resource path="res://Assets/Audio/levelsAudio/choiceAGulay.mp3" type="AudioStream" id=23]
+[ext_resource path="res://Assets/Audio/levelsAudio/choiceBGulay.mp3" type="AudioStream" id=24]
+[ext_resource path="res://Assets/Audio/levelsAudio/choiceCGulay.mp3" type="AudioStream" id=25]
 
 [sub_resource type="DynamicFont" id=33]
 size = 40
@@ -731,6 +733,8 @@ __meta__ = {
 
 [node name="choiceB" type="AudioStreamPlayer" parent="background/askHolder/answerLabelB"]
 unique_name_in_owner = true
+stream = ExtResource( 24 )
+bus = "Voices"
 
 [node name="answerLabelC" type="Label" parent="background/askHolder"]
 anchor_left = 0.049801
@@ -772,6 +776,8 @@ __meta__ = {
 
 [node name="choiceC" type="AudioStreamPlayer" parent="background/askHolder/answerLabelC"]
 unique_name_in_owner = true
+stream = ExtResource( 25 )
+bus = "Voices"
 
 [node name="AnswerPanel" type="Control" parent="background"]
 anchor_left = 0.553711
