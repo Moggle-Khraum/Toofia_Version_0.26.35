@@ -6,13 +6,15 @@
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GUI/Background.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=6]
-[ext_resource path="res://Assets/Fonts/therok_regular.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Assets/UIElements/Icon_Pencil.png" type="Texture" id=8]
 [ext_resource path="res://Assets/GUI/Icon_LongSquare.png" type="Texture" id=9]
 [ext_resource path="res://Assets/UIElements/Icon_SqiuareTilt.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Images/pilot-logo.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Icons/ic_launcher.png" type="Texture" id=12]
 
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="StyleBoxTexture" id=27]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 192, 192 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 130
@@ -21,15 +23,9 @@ outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
 use_filter = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="DynamicFont" id=14]
-size = 35
-outline_size = 5
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
-fallback/0 = ExtResource( 2 )
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 176, 159 )
 
 [sub_resource type="DynamicFont" id=15]
 size = 25
@@ -167,24 +163,10 @@ anchor_left = 0.0234375
 anchor_top = 0.036674
 anchor_right = 0.169922
 anchor_bottom = 0.269573
-custom_styles/panel = SubResource( 12 )
+custom_styles/panel = SubResource( 27 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
-}
-
-[node name="Label" type="Label" parent="Panel2/GameIcon"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 7 )
-text = "Game Icon"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-uppercase = true
-__meta__ = {
-"_edit_lock_": true
 }
 
 [node name="TitleLabel2" type="Label" parent="Panel2"]
@@ -213,25 +195,10 @@ anchor_left = 0.830078
 anchor_top = 0.036674
 anchor_right = 0.976563
 anchor_bottom = 0.271202
-custom_styles/panel = SubResource( 13 )
+custom_styles/panel = SubResource( 28 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
-}
-
-[node name="schoolLabel" type="Label" parent="Panel2/SchoolLogo"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = SubResource( 14 )
-text = "school
-logo"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-uppercase = true
-__meta__ = {
-"_edit_lock_": true
 }
 
 [node name="play2" type="Label" parent="Panel2"]

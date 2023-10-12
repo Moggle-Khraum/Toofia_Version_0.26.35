@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Scripts/MenuChoicesScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
@@ -18,17 +18,22 @@
 [ext_resource path="res://Assets/GUI/Blue_Rectangle.png" type="Texture" id=16]
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Images/pilot-logo.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Icons/win7_launcher.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Icons/ic_launcher.png" type="Texture" id=19]
 [ext_resource path="res://Assets/GUI/Icon_Return.png" type="Texture" id=20]
 [ext_resource path="res://Assets/GUI/Icon_LongSquare.png" type="Texture" id=21]
 [ext_resource path="res://Assets/UIElements/Icon_SqiuareTilt.png" type="Texture" id=22]
 
-[sub_resource type="DynamicFont" id=21]
-size = 56
+[sub_resource type="DynamicFont" id=38]
+size = 60
 outline_size = 2
-outline_color = Color( 0.776471, 0.776471, 0.776471, 1 )
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
 use_filter = true
-extra_spacing_char = -1
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 60
+use_filter = true
 font_data = ExtResource( 3 )
 fallback/0 = ExtResource( 2 )
 
@@ -66,19 +71,35 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=8]
-resource_local_to_scene = true
-size = 28
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=33]
+size = 22
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=9]
-resource_local_to_scene = true
-size = 23
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=34]
+size = 22
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 18
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 18
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=10]
 resource_local_to_scene = true
@@ -113,6 +134,14 @@ region_rect = Rect2( 0, 0, 1208, 653 )
 
 [sub_resource type="StyleBoxEmpty" id=17]
 
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 192, 192 )
+
+[sub_resource type="StyleBoxTexture" id=30]
+texture = ExtResource( 18 )
+region_rect = Rect2( 0, 0, 176, 159 )
+
 [sub_resource type="DynamicFont" id=26]
 resource_local_to_scene = true
 size = 20
@@ -121,19 +150,17 @@ outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_top = 6
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=27]
-size = 30
+[sub_resource type="DynamicFont" id=31]
+size = 25
 outline_size = 2
 outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
 fallback/0 = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=28]
-size = 33
-outline_color = Color( 0.266667, 0.266667, 0.266667, 1 )
+[sub_resource type="DynamicFont" id=32]
+size = 25
 use_filter = true
-extra_spacing_char = -2
 font_data = ExtResource( 3 )
 fallback/0 = ExtResource( 2 )
 
@@ -157,18 +184,35 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="bloxOfTime" type="Label" parent="Panel"]
-anchor_left = 0.201172
-anchor_top = 0.0383333
-anchor_right = 0.808594
-anchor_bottom = 0.15
+[node name="bloxoftime" type="Label" parent="Panel"]
+anchor_left = 0.160156
+anchor_top = 0.0266667
+anchor_right = 0.835938
+anchor_bottom = 0.151667
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 4
-custom_fonts/font = SubResource( 21 )
-text = "blocks of time
-"
+custom_fonts/font = SubResource( 38 )
+text = "Blocks of Time"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bloxoftime" type="Label" parent="Panel/bloxoftime"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 39 )
+text = "blocks of time"
 align = 1
 valign = 1
 autowrap = true
@@ -180,6 +224,7 @@ __meta__ = {
 }
 
 [node name="bloxOfTime2" type="Label" parent="Panel"]
+visible = false
 anchor_left = 0.169922
 anchor_top = 0.0266667
 anchor_right = 0.841797
@@ -196,8 +241,7 @@ autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
+"_edit_lock_": true
 }
 
 [node name="bloxoftime" type="Label" parent="Panel/bloxOfTime2"]
@@ -344,6 +388,7 @@ mouse_filter = 2
 texture = ExtResource( 9 )
 stretch_mode = 1
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -359,22 +404,41 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="CardLabel1" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice1"]
+[node name="prutasAtGulay" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice1"]
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 165.0
-mouse_filter = 1
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 2
-custom_constants/shadow_offset_y = 7
-custom_fonts/font = SubResource( 8 )
-text = "Prutas at Gulay"
+margin_left = -15.0
+margin_top = -27.0
+margin_right = 6.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 33 )
+text = "prutas at gulay"
 align = 1
 valign = 1
 autowrap = true
+clip_text = true
+uppercase = true
+
+[node name="prutasatgulay" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice1/prutasAtGulay"]
+anchor_top = -0.105263
+anchor_right = 1.0
+anchor_bottom = 1.05263
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 34 )
+text = "prutas at gulay"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_use_anchors_": true
 }
 
 [node name="Choice2" type="TextureRect" parent="ScrollContainer/MarginContainer/HBoxContainer"]
@@ -399,15 +463,34 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="CardLabel2" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice2"]
-anchor_top = 0.834783
+[node name="farmanimals" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice2"]
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 2
-custom_constants/shadow_offset_y = 7
-custom_fonts/font = SubResource( 9 )
-text = "Mga Hayop sa bukid"
+margin_left = -6.0
+margin_top = -31.0
+margin_right = 9.0
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 37 )
+text = "mga hayop sa bukid"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+
+[node name="farmanimals" type="Label" parent="ScrollContainer/MarginContainer/HBoxContainer/Choice2/farmanimals"]
+anchor_top = -0.105263
+anchor_right = 1.0
+anchor_bottom = 1.05263
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 36 )
+text = "mga hayop sa bukid"
 align = 1
 valign = 1
 autowrap = true
@@ -566,30 +649,25 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="SchoolLogo" type="TextureRect" parent="."]
-anchor_left = 0.845703
-anchor_top = 0.0266667
-anchor_right = 0.979492
-anchor_bottom = 0.24
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 18 )
-expand = true
+[node name="GameIcon" type="Panel" parent="."]
+anchor_left = 0.0234375
+anchor_top = 0.036674
+anchor_right = 0.169922
+anchor_bottom = 0.269573
+custom_styles/panel = SubResource( 29 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="gameLogo" type="TextureRect" parent="."]
-anchor_left = 0.0273438
-anchor_top = 0.0433333
-anchor_right = 0.161133
-anchor_bottom = 0.256667
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 19 )
-expand = true
+[node name="SchoolLogo" type="Panel" parent="."]
+anchor_left = 0.830078
+anchor_top = 0.036674
+anchor_right = 0.976563
+anchor_bottom = 0.271202
+custom_styles/panel = SubResource( 30 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
@@ -600,6 +678,7 @@ anchor_right = 0.689453
 anchor_bottom = 0.965
 margin_right = 0.999939
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
@@ -626,47 +705,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="backLabel" type="Label" parent="gobackCage/GoBackButton"]
-anchor_left = 0.162205
-anchor_top = 0.0153846
-anchor_right = 0.822824
-anchor_bottom = 0.907694
-custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
-custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
-custom_constants/shadow_offset_x = 1
-custom_constants/shadow_offset_y = 4
-custom_fonts/font = SubResource( 27 )
-text = "bumalik"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="backLabel" type="Label" parent="gobackCage/GoBackButton/backLabel"]
-anchor_left = 0.03125
-anchor_top = -0.0344828
-anchor_right = 0.964286
-anchor_bottom = 0.931034
-custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 5
-custom_fonts/font = SubResource( 28 )
-text = "bumalik"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-uppercase = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
 [node name="backIcon" type="TextureRect" parent="gobackCage"]
 anchor_left = 0.0764331
 anchor_top = 0.0125
@@ -686,6 +724,46 @@ anchor_right = 0.755489
 anchor_bottom = 0.746548
 texture = ExtResource( 20 )
 expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="goBack" type="Label" parent="gobackCage"]
+anchor_left = 0.238461
+anchor_top = 0.201923
+anchor_right = 0.841025
+anchor_bottom = 0.750001
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 31 )
+text = "bumalik"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="goback" type="Label" parent="gobackCage/goBack"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 32 )
+text = "bumalik"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true

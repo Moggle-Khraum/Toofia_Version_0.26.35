@@ -1,7 +1,11 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scripts/CompatAlert.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/Titillium-BoldItalic.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/Titillium-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Fonts/Titillium-RegularItalic.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/GUI/Item2.png" type="Texture" id=8]
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=10]
@@ -37,6 +41,65 @@ size = 25
 use_filter = true
 font_data = ExtResource( 10 )
 fallback/0 = ExtResource( 2 )
+
+[sub_resource type="Theme" id=16]
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/decrement_pressed = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/icons/increment_pressed = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = null
+HScrollBar/styles/scroll_focus = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="DynamicFont" id=17]
+resource_local_to_scene = true
+size = 23
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=18]
+resource_local_to_scene = true
+size = 23
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 23
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=20]
+resource_local_to_scene = true
+size = 23
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=13]
 size = 18
@@ -79,6 +142,7 @@ texture = ExtResource( 12 )
 region_rect = Rect2( 0, 0, 356, 357 )
 
 [node name="PopupDialog" type="Popup"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 popup_exclusive = true
@@ -155,6 +219,7 @@ __meta__ = {
 }
 
 [node name="faqs" type="Label" parent="CenterContainer/PanelPopup"]
+visible = false
 anchor_left = 0.147541
 anchor_top = 0.112
 anchor_right = 0.857924
@@ -194,13 +259,67 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="ScrollContainer2" type="ScrollContainer" parent="CenterContainer/PanelPopup"]
+anchor_left = 0.020765
+anchor_top = 0.114
+anchor_right = 0.981421
+anchor_bottom = 1.158
+theme = SubResource( 16 )
+scroll_horizontal_enabled = false
+scroll_vertical_enabled = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelPopup/ScrollContainer2"]
+margin_right = 879.0
+margin_bottom = 377.0
+rect_clip_content = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelPopup/ScrollContainer2/VBoxContainer"]
+margin_right = 879.0
+margin_bottom = 377.0
+rect_min_size = Vector2( 879, 0 )
+custom_constants/line_separation = 5
+custom_fonts/bold_italics_font = SubResource( 17 )
+custom_fonts/italics_font = SubResource( 18 )
+custom_fonts/bold_font = SubResource( 19 )
+custom_fonts/normal_font = SubResource( 20 )
+bbcode_enabled = true
+bbcode_text = "[center] [b][u] Q1.) Bakit ito ay lumabas at hindi nagpatuloy sa laro?[/u][/b][/center]
+[center][b] Ayon sa mga developers ng laro, may dalawang rason kung bakit ito nangyari: [/b][/center]
+[b] A1.)[/b] Unang Rason:
+ [i]Hindi gumagana ang laro sa mas lumang bersyon ng Android (i.e. Android 5). Kinakailangan ng mas bagong bersyon ng Android upang mai-akma sa kinakailangang bersyon ng laro, ang pagpapalit ng kasulukuyang ginagamit na selpon ay isa ring mainam na solusyon upang ito ay maresolbahan.[/i]
+[b] A2.)[/b] Pangalawang Rason:
+[i]Hindi gumagana ang laro sa isang iOS na selpon, dahil sa mga problema ng pag 'export' at wala 'rin sa plano ng mga developers ng laro ang mag-release ng iOS na bersyon ng laro. Ang pagpapalit ng selpon ay ang tanging solusyon sa problmenang ito.
+
+[b][center][i]Maaari kang lumabas sa laro sa pag-pindut ng 'pintuan' na matatagpuan sa gitnang-ibaba.[/i][/center][b]"
+tab_size = 3
+text = "  Q1.) Bakit ito ay lumabas at hindi nagpatuloy sa laro?
+ Ayon sa mga developers ng laro, may dalawang rason kung bakit ito nangyari: 
+ A1.) Unang Rason:
+ Hindi gumagana ang laro sa mas lumang bersyon ng Android (i.e. Android 5). Kinakailangan ng mas bagong bersyon ng Android upang mai-akma sa kinakailangang bersyon ng laro, ang pagpapalit ng kasulukuyang ginagamit na selpon ay isa ring mainam na solusyon upang ito ay maresolbahan.
+ A2.) Pangalawang Rason:
+Hindi gumagana ang laro sa isang iOS na selpon, dahil sa mga problema ng pag 'export' at wala 'rin sa plano ng mga developers ng laro ang mag-release ng iOS na bersyon ng laro. Ang pagpapalit ng selpon ay ang tanging solusyon sa problmenang ito.
+
+Maaari kang lumabas sa laro sa pag-pindut ng 'pintuan' na matatagpuan sa gitnang-ibaba."
+fit_content_height = true
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/PanelPopup"]
+visible = false
 anchor_left = 0.0262295
 anchor_top = 0.206
 anchor_right = 0.981421
 anchor_bottom = 0.868
+rect_clip_content = false
 mouse_filter = 2
-follow_focus = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -208,7 +327,7 @@ __meta__ = {
 
 [node name="HFlowContainer" type="HFlowContainer" parent="CenterContainer/PanelPopup/ScrollContainer"]
 margin_right = 862.0
-margin_bottom = 773.0
+margin_bottom = 621.0
 rect_clip_content = true
 mouse_filter = 2
 __meta__ = {
@@ -216,6 +335,7 @@ __meta__ = {
 }
 
 [node name="infoLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
+visible = false
 margin_right = 862.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 862, 80 )
@@ -236,6 +356,7 @@ __meta__ = {
 }
 
 [node name="infoLine1" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer/infoLine"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 0, 80 )
@@ -254,9 +375,9 @@ __meta__ = {
 }
 
 [node name="noteLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 84.0
+visible = false
 margin_right = 862.0
-margin_bottom = 114.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 862, 30 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -275,9 +396,9 @@ __meta__ = {
 }
 
 [node name="noteLine1" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 118.0
+visible = false
 margin_right = 862.0
-margin_bottom = 148.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 862, 30 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -296,9 +417,8 @@ __meta__ = {
 }
 
 [node name="askLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 152.0
 margin_right = 862.0
-margin_bottom = 212.0
+margin_bottom = 60.0
 rect_min_size = Vector2( 862, 60 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -333,9 +453,9 @@ __meta__ = {
 }
 
 [node name="ansLine" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 216.0
+margin_top = 64.0
 margin_right = 862.0
-margin_bottom = 391.0
+margin_bottom = 239.0
 rect_min_size = Vector2( 862, 175 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -370,9 +490,9 @@ __meta__ = {
 }
 
 [node name="askLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 395.0
+margin_top = 243.0
 margin_right = 862.0
-margin_bottom = 435.0
+margin_bottom = 283.0
 rect_min_size = Vector2( 862, 40 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -407,9 +527,9 @@ __meta__ = {
 }
 
 [node name="ansLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 439.0
+margin_top = 287.0
 margin_right = 862.0
-margin_bottom = 689.0
+margin_bottom = 537.0
 rect_min_size = Vector2( 862, 250 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
@@ -444,9 +564,9 @@ __meta__ = {
 }
 
 [node name="noteLine2" type="Label" parent="CenterContainer/PanelPopup/ScrollContainer/HFlowContainer"]
-margin_top = 693.0
+margin_top = 541.0
 margin_right = 862.0
-margin_bottom = 773.0
+margin_bottom = 621.0
 rect_min_size = Vector2( 862, 80 )
 custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
 custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
