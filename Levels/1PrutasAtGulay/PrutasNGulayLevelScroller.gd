@@ -6,6 +6,9 @@ var backtoTopic = load('res://Scenes/MenuChoices.tscn')
 #THIS IS FOR SIGNAL that was used by Buttons
 signal pressed
 
+#func _ready() -> void:
+#	$'%fruitTheme'.play()
+
 #This is for the Left Button
 func _on_LeftButton_pressed() -> void:
 	ScrollPop.play()
@@ -25,9 +28,14 @@ func _on_GoBackButton_pressed() -> void:
 	print("Presses Go Back")
 	MenuClickSfxPlayer.play()
 	#handles the Go back button
-	$'.'.hide()
 	var levelSelect = get_tree().change_scene_to(backtoTopic)
 	print("Going to Topic Selector")
+	$'%fruitTheme'.stop()
+
+
+func _on_PrutasAtGulay_visibility_changed() -> void:
+	$'%fruitTheme'.play()
+	print("Theme Fruit Plays")
 	
 
 ################################################################################################
@@ -47,12 +55,13 @@ func _on_1Button_pressed() -> void:
 	
 	print ("You are now at Level 1")
 	MainMenuThemePlayer.stop()
+	$'%fruitTheme'.stop()
 
 # THIS IS LEVEL 2
 func _on_2Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 2")
-	$'Panel/4QuestDummy'.show()
+	var level1 = get_tree().change_scene("res://Levels/1PrutasAtGulay/Level1/2ndQuestion/Level_1Q2.tscn")
 	emit_signal('pressed')
 	print ("You are now at Level 2")
 	
@@ -65,7 +74,6 @@ func _on_2Button_pressed() -> void:
 func _on_3Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 3")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 3")
 	createPlayerData3()
@@ -75,7 +83,6 @@ func _on_3Button_pressed() -> void:
 func _on_4Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 4")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 4")
 	createPlayerData4()
@@ -85,7 +92,6 @@ func _on_4Button_pressed() -> void:
 func _on_9Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 5")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 5")
 	createPlayerData9()
@@ -95,7 +101,6 @@ func _on_9Button_pressed() -> void:
 func _on_10Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 6")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 6")
 	createPlayerData10()
@@ -105,7 +110,6 @@ func _on_10Button_pressed() -> void:
 func _on_11Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 7")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 7")
 	createPlayerData11()
@@ -115,7 +119,6 @@ func _on_11Button_pressed() -> void:
 func _on_12Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 8")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 8")
 	createPlayerData12()
@@ -126,7 +129,6 @@ func _on_12Button_pressed() -> void:
 func _on_5Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 9")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 9")
 	createPlayerData5()
@@ -136,7 +138,6 @@ func _on_5Button_pressed() -> void:
 func _on_6Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 10")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 10")
 	createPlayerData6()
@@ -146,7 +147,6 @@ func _on_6Button_pressed() -> void:
 func _on_7Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 11")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 11")
 	createPlayerData7()
@@ -156,7 +156,6 @@ func _on_7Button_pressed() -> void:
 func _on_8Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 12")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 12")
 	createPlayerData8()
@@ -166,7 +165,6 @@ func _on_8Button_pressed() -> void:
 func _on_13Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 13")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 13")
 	createPlayerData13()
@@ -176,7 +174,6 @@ func _on_13Button_pressed() -> void:
 func _on_14Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 14")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 14")
 	createPlayerData14()
@@ -186,19 +183,12 @@ func _on_14Button_pressed() -> void:
 func _on_15Button_pressed() -> void:
 	LevelsButtons.play()
 	print("Presses Level 15")
-	$'Panel/4QuestDummy'.show()
 	emit_signal('pressed')
 	print ("You are now at Level 15")
 	createPlayerData15()
 	print ("Level 15 Data Folder Created")
 	
-# THIS IS LEVEL 16
-func _on_16Button_pressed() -> void:
-	LevelsButtons.play()
-	print("Presses Level 16")
-	$'Panel/4QuestDummy'.show()
-	emit_signal('pressed')
-	print ("You are now at Level 16")
+
 
 #THE BUTTONS BELOW IS FOR THE LEVEL ERROR
 #THIS IS FOR THE ERROR SOUND EFFECTS
@@ -372,5 +362,4 @@ func createPlayerData15():
 		dir.make_dir_recursive(data_dir)
 		print("Level15 Data Done!")
 	print("Folder Created..")
-
 

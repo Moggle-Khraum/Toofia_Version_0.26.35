@@ -6,6 +6,7 @@ var backtoTopic = load('res://Scenes/MenuChoices.tscn')
 #THIS IS FOR SIGNAL that was used by Buttons
 signal pressed
 
+
 #This is for the Left Button
 func _on_LeftButton_pressed() -> void:
 	ScrollPop.play()
@@ -29,7 +30,12 @@ func _on_GoBackButton_pressed() -> void:
 	#handles the Go back button
 	$'.'.hide()
 	var levelSelect = get_tree().change_scene_to(backtoTopic)
+	$'%animalsTheme'.stop()
 	print("Going to Topic Selector")
+	
+	
+	
+	
 	
 ################################################################################################
 #
@@ -160,13 +166,7 @@ func _on_15Button_pressed() -> void:
 	emit_signal('pressed')
 	print ("You are now at Level 15")
 	
-# THIS IS LEVEL 16
-func _on_16Button_pressed() -> void:
-	LevelsButtons.play()
-	print("Presses Level 16")
-	$'Panel/1QuestDummy'.show()
-	emit_signal('pressed')
-	print ("You are now at Level 16")
+
 
 
 
@@ -185,7 +185,7 @@ func _on_hide_pressed() -> void:
 	$'%bgPanel'.hide()
 	print("Hides LevelLock")
 
-
-
-
-
+func _on_MgaHayopSaBukid_visibility_changed() -> void:
+	$'%animalsTheme'.play()
+	print("Plays Animals Music")
+	

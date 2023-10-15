@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scripts/MenuChoicesScript.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=2]
@@ -11,10 +11,8 @@
 [ext_resource path="res://Assets/Images/Fruits4.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GUI/leftArrow.png" type="Texture" id=10]
 [ext_resource path="res://Assets/GUI/rightArrow.png" type="Texture" id=11]
-[ext_resource path="res://Levels/1PrutasAtGulay/PrutasAtGulayLevel.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Levels/MgaHayopSaBukid/MgaHayopSaBukid.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Levels/PagguhitNgAlpabeto/PagguhitNgAlpabeto.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Levels/ParteNgKatawanNgTao/ParteNgKatawanNgTao.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Levels/MgaHayopSaBukid/MgaHayopSaBukid.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Levels/1PrutasAtGulay/PrutasAtGulayLevel.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/GUI/Blue_Rectangle.png" type="Texture" id=16]
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Images/pilot-logo.png" type="Texture" id=18]
@@ -201,6 +199,7 @@ autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
@@ -398,6 +397,8 @@ anchor_left = 0.217262
 anchor_top = 0.281818
 anchor_right = 0.616071
 anchor_bottom = 0.636364
+focus_mode = 0
+enabled_focus_mode = 0
 flat = true
 __meta__ = {
 "_edit_lock_": true,
@@ -458,6 +459,8 @@ anchor_left = 0.305085
 anchor_top = 0.295652
 anchor_right = 0.65678
 anchor_bottom = 0.6
+focus_mode = 0
+enabled_focus_mode = 0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -518,6 +521,8 @@ anchor_left = 0.283898
 anchor_top = 0.278261
 anchor_right = 0.635593
 anchor_bottom = 0.582609
+focus_mode = 0
+enabled_focus_mode = 0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -561,6 +566,8 @@ anchor_left = 0.34322
 anchor_top = 0.234783
 anchor_right = 0.694915
 anchor_bottom = 0.565217
+focus_mode = 0
+enabled_focus_mode = 0
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -607,8 +614,10 @@ anchor_right = 0.192811
 anchor_bottom = 0.999999
 margin_right = -11.3811
 margin_bottom = 8.0004
+focus_mode = 0
 custom_styles/hover = SubResource( 14 )
 custom_styles/focus = SubResource( 15 )
+enabled_focus_mode = 0
 icon = ExtResource( 11 )
 flat = true
 clip_text = true
@@ -636,8 +645,10 @@ __meta__ = {
 anchor_left = 0.822824
 anchor_right = 1.0
 anchor_bottom = 1.0
+focus_mode = 0
 custom_styles/hover = SubResource( 16 )
 custom_styles/focus = SubResource( 17 )
+enabled_focus_mode = 0
 icon = ExtResource( 10 )
 flat = true
 clip_text = true
@@ -769,17 +780,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="MgaHayopSaBukid" parent="." instance=ExtResource( 13 )]
+[node name="PrutasAtGulay" parent="." instance=ExtResource( 13 )]
 unique_name_in_owner = true
 
-[node name="PagguhitNgAlpabeto" parent="." instance=ExtResource( 14 )]
+[node name="MgaHayopSaBukid" parent="." instance=ExtResource( 12 )]
 unique_name_in_owner = true
-
-[node name="ParteNgKatawanNgTao" parent="." instance=ExtResource( 15 )]
-unique_name_in_owner = true
-
-[node name="PrutasAtGulay" parent="." instance=ExtResource( 12 )]
-unique_name_in_owner = true
+visible = false
 
 [connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice1/CardMenu1" to="." method="_on_CardMenu1_pressed"]
 [connection signal="pressed" from="ScrollContainer/MarginContainer/HBoxContainer/Choice2/CardMenu2" to="." method="_on_CardMenu2_pressed"]
@@ -788,3 +794,5 @@ unique_name_in_owner = true
 [connection signal="pressed" from="VisibleBlockerRight/RightButton" to="ScrollContainer" method="_on_RightButton_pressed"]
 [connection signal="pressed" from="VisibleBlockerLeft/LeftButton" to="ScrollContainer" method="_on_LeftButton_pressed"]
 [connection signal="pressed" from="gobackCage/GoBackButton" to="." method="_on_GoBackButton_pressed"]
+[connection signal="visibility_changed" from="PrutasAtGulay" to="PrutasAtGulay" method="_on_PrutasAtGulay_visibility_changed"]
+[connection signal="visibility_changed" from="MgaHayopSaBukid" to="MgaHayopSaBukid" method="_on_MgaHayopSaBukid_visibility_changed"]

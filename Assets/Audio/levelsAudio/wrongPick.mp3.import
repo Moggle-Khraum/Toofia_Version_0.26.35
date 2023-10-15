@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wrongPick.mp3-7a9b98d0fe919829fca8ba40cb99f0d6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/wrongPick.mp3"
+dest_files=[ "res://.import/wrongPick.mp3-7a9b98d0fe919829fca8ba40cb99f0d6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

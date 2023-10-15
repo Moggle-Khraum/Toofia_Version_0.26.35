@@ -9,8 +9,3 @@ func _on_ExitButton_pressed():
 	print("Going to Credits")
 
 
-#func _on_LevelButton_pressed():
-#	print("Presses 'Lets Play'")
-#	var _nextLoad = get_tree().change_scene("res://Scenes/AlphabetTracing.tscn")
-#	print ("Closes Info")
-#	print("Going to Level Selector")

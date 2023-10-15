@@ -1,9 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Assets/Fonts/therok_regular.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Audio/Running_Through_The_Jungle.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Fonts/therok-regular-400.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/GUI/IconButton_Large_Blue_Square_Pressed.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GUI/rightArrow.png" type="Texture" id=5]
 [ext_resource path="res://Assets/GUI/leftArrow.png" type="Texture" id=6]
 [ext_resource path="res://Assets/GUI/Icon_X.png" type="Texture" id=7]
@@ -11,40 +9,63 @@
 [ext_resource path="res://Levels/MgaHayopSaBukid/MgaHayopSaBukid.gd" type="Script" id=9]
 [ext_resource path="res://Levels/MgaHayopSaBukid/QuestLevels1/QuestDummy1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/GUI/Blue_Square.png" type="Texture" id=11]
-[ext_resource path="res://Assets/GUI/IconButton_Small_Background_Rounded.png" type="Texture" id=12]
 [ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Circle.png" type="Texture" id=13]
 [ext_resource path="res://Assets/UIElements/Icon_Lock.png" type="Texture" id=14]
 [ext_resource path="res://Assets/GUI/IconButton_Large_Orange_Square.png" type="Texture" id=15]
 [ext_resource path="res://Levels/LevelLocked.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Fonts/Kaph-Regular.otf" type="DynamicFontData" id=17]
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 1280, 720 )
 
-[sub_resource type="Theme" id=6]
-
-[sub_resource type="DynamicFont" id=7]
-size = 26
-outline_size = 5
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+[sub_resource type="DynamicFont" id=8]
+size = 32
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 17 )
 fallback/0 = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 50
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = -5
-extra_spacing_space = -3
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=9]
+size = 32
+use_filter = true
+font_data = ExtResource( 17 )
+fallback/0 = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 30
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+[sub_resource type="Theme" id=6]
 
-[node name="MgaHayopSaBukid" type="Popup"]
+[sub_resource type="DynamicFont" id=10]
+size = 60
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+extra_spacing_char = -3
+font_data = ExtResource( 17 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 60
+use_filter = true
+extra_spacing_char = -3
+font_data = ExtResource( 17 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 32
+outline_size = 2
+outline_color = Color( 0.313726, 0.027451, 0.0627451, 1 )
+use_filter = true
+font_data = ExtResource( 17 )
+fallback/0 = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 32
+use_filter = true
+font_data = ExtResource( 17 )
+fallback/0 = ExtResource( 3 )
+
+[node name="MgaHayopSaBukid" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 9 )
@@ -117,22 +138,44 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture1/1Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-1"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture1/1Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 01"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture1/1Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 01"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
 [node name="Texture2" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer"]
@@ -163,22 +206,44 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture2/2Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-2"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture2/2Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 02"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture2/2Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 02"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
 [node name="Texture3" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer"]
@@ -208,45 +273,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/3Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-3"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/3Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 03"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/3Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 03"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -254,12 +329,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture3/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -292,45 +367,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/4Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-4"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/4Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 04"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/4Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 04"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -338,12 +423,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Texture4/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -376,45 +461,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/5Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-9"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/5Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 09"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/5Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 09"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -422,12 +517,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button5/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -460,45 +555,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/6Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-10"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/6Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 10"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/6Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 10"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -506,12 +611,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button6/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -544,45 +649,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/7Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-11"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/7Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 11"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/7Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 11"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -590,12 +705,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button7/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -628,45 +743,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/8Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-12"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/8Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 12"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/8Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 12"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -674,12 +799,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer/Button8/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -724,45 +849,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/9Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-5"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/9Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 05"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/9Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 05"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -770,12 +905,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button9/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -808,45 +943,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/10Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-6"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/10Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 06"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/10Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 06"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -854,12 +999,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button10/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -892,45 +1037,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/11Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-7"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/11Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 07"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/11Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 07"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -938,12 +1093,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button11/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -976,45 +1131,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/12Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-8"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/12Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 08"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/12Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 08"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -1022,12 +1187,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button12/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -1060,45 +1225,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/13Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-13"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/13Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 13"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/13Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 13"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -1106,12 +1281,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button13/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -1144,45 +1319,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/14Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-14"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/14Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 14"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/14Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 14"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -1190,12 +1375,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button14/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -1228,45 +1413,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/15Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = ExtResource( 1 )
-text = "Level
-15"
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/15Button"]
+anchor_left = -0.333333
+anchor_top = -0.0941153
+anchor_right = 1.28571
+anchor_bottom = 0.941179
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "level 15"
 align = 1
 valign = 1
 autowrap = true
 clip_text = true
 uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/15Button/level"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "level 15"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
+[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15"]
+anchor_left = 0.587033
+anchor_top = 0.568262
+anchor_right = 0.952033
+anchor_bottom = 0.958262
+margin_left = 0.593399
+margin_top = 0.347832
+margin_right = 0.593399
+margin_bottom = 0.347824
 texture = ExtResource( 14 )
 expand = true
 __meta__ = {
@@ -1274,12 +1469,12 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/lockBlock/lockIcon"]
+[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button15/lockIcon"]
 self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
+anchor_left = -0.917808
+anchor_top = -0.692308
+anchor_right = 0.465753
+anchor_bottom = 0.166667
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -1296,101 +1491,36 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="button16" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16"]
-unique_name_in_owner = true
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16"]
+anchor_left = 0.035
+anchor_top = 0.05
+anchor_right = 0.96
+anchor_bottom = 0.955
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 8 )
+text = "COMING SOON..!"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
-"_edit_lock_": true
+"_edit_lock_": true,
+"_edit_use_anchors_": true
 }
 
-[node name="16Button" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -50.0
-margin_top = -46.0
-margin_right = 55.0
-margin_bottom = 39.0
-focus_mode = 0
-enabled_focus_mode = 0
-flat = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Label" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16/16Button"]
+[node name="level" type="Label" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16/level"]
+anchor_top = -0.0193965
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
 custom_constants/shadow_offset_x = 3
-custom_constants/shadow_offset_y = 2
-custom_fonts/font = SubResource( 7 )
-text = "Coming
-Soon"
-align = 1
-valign = 1
-autowrap = true
-clip_text = true
-uppercase = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="lockBlock" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16"]
-anchor_left = 0.045
-anchor_top = 0.04
-anchor_right = 0.955
-anchor_bottom = 0.96
-texture = ExtResource( 12 )
-expand = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="lockIcon" type="TextureRect" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16/lockBlock"]
-anchor_left = 0.197033
-anchor_top = 0.123261
-anchor_right = 0.861868
-anchor_bottom = 0.856957
-margin_left = -4.86
-margin_top = -5.68
-margin_right = -4.86
-margin_bottom = -5.68001
-texture = ExtResource( 14 )
-expand = true
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="lockInfo" type="Button" parent="Panel/ScrollContainer/Control/HBoxContainer0/Button16/lockBlock/lockIcon"]
-self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.115044
-anchor_top = 0.449612
-anchor_right = 0.911504
-anchor_bottom = 0.922481
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": true
-}
-
-[node name="FarmAnimalsLabel" type="Label" parent="Panel"]
-anchor_left = 0.143555
-anchor_top = 0.0283333
-anchor_right = 0.860352
-anchor_bottom = 0.156667
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 2
-custom_constants/shadow_offset_y = 7
-custom_fonts/font = SubResource( 3 )
-text = "Mga hayop sa bukid"
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 9 )
+text = "coming soon..!"
 align = 1
 valign = 1
 autowrap = true
@@ -1401,16 +1531,76 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="LevelSelectLabel" type="Label" parent="Panel"]
-anchor_left = 0.199219
-anchor_top = 0.135
-anchor_right = 0.803711
-anchor_bottom = 0.203333
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 2
-custom_constants/shadow_offset_y = 7
-custom_fonts/font = SubResource( 4 )
-text = "Pumili ng Level sa Ibaba"
+[node name="farmAnimals" type="Label" parent="Panel"]
+anchor_left = 0.0751953
+anchor_top = 0.0233333
+anchor_right = 0.919922
+anchor_bottom = 0.148333
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 10 )
+text = "mga hayop sa bukid"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="farmAnimals" type="Label" parent="Panel/farmAnimals"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 11 )
+text = "mga hayop sa bukid"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="selectLevel" type="Label" parent="Panel"]
+anchor_left = 0.149414
+anchor_top = 0.113333
+anchor_right = 0.84668
+anchor_bottom = 0.238333
+custom_colors/font_color = Color( 0.886275, 0.317647, 0.27451, 1 )
+custom_colors/font_color_shadow = Color( 0.580392, 0.247059, 0.286275, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 12 )
+text = "pumili ng level sa ibaba"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="selectLevel" type="Label" parent="Panel/selectLevel"]
+anchor_top = -0.0193965
+anchor_right = 1.0
+anchor_bottom = 1.02938
+custom_colors/font_color = Color( 1, 0.643137, 0.215686, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 13 )
+text = "pumili ng level sa ibaba"
 align = 1
 valign = 1
 autowrap = true
@@ -1426,6 +1616,8 @@ anchor_left = 0.0185547
 anchor_top = 0.465
 anchor_right = 0.0742188
 anchor_bottom = 0.681667
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 6 )
 flat = true
 expand_icon = true
@@ -1439,6 +1631,8 @@ anchor_left = 0.920898
 anchor_top = 0.458333
 anchor_right = 0.976563
 anchor_bottom = 0.675
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 5 )
 flat = true
 expand_icon = true
@@ -1481,36 +1675,39 @@ __meta__ = {
 [node name="bgPanel" parent="." instance=ExtResource( 16 )]
 unique_name_in_owner = true
 
+[node name="animalsTheme" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource( 1 )
+bus = "Music"
+
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture1/1Button" to="." method="_on_1Button_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture2/2Button" to="." method="_on_2Button_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture3/3Button" to="." method="_on_3Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture3/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture3/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture4/4Button" to="." method="_on_4Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture4/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Texture4/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button5/5Button" to="." method="_on_5Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button5/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button5/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button6/6Button" to="." method="_on_6Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button6/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button6/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button7/7Button" to="." method="_on_7Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button7/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button7/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button8/8Button" to="." method="_on_8Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button8/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer/Button8/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button9/9Button" to="." method="_on_9Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button9/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button9/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button10/10Button" to="." method="_on_10Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button10/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button10/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button11/11Button" to="." method="_on_11Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button11/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button11/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button12/12Button" to="." method="_on_12Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button12/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button12/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button13/13Button" to="." method="_on_13Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button13/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button13/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button14/14Button" to="." method="_on_14Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button14/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button14/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button15/15Button" to="." method="_on_15Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button15/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button16/16Button" to="." method="_on_16Button_pressed"]
-[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button16/lockBlock/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
+[connection signal="pressed" from="Panel/ScrollContainer/Control/HBoxContainer0/Button15/lockIcon/lockInfo" to="." method="_on_lockInfo_pressed"]
 [connection signal="pressed" from="Panel/LeftButton" to="." method="_on_LeftButton_pressed"]
 [connection signal="pressed" from="Panel/RightButton" to="." method="_on_RightButton_pressed"]
 [connection signal="pressed" from="Panel/GoBackButton2" to="." method="_on_GoBackButton_pressed"]

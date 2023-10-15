@@ -364,10 +364,10 @@ __meta__ = {
 [node name="VersionLabel" type="Label" parent="."]
 anchor_left = 0.0214844
 anchor_top = 0.911667
-anchor_right = 0.285156
+anchor_right = 0.206055
 anchor_bottom = 0.963333
 custom_fonts/font = SubResource( 25 )
-text = "Toofia Prototype ver.0.7.15"
+text = "Toofia  ver.0.10.25"
 align = 1
 valign = 1
 autowrap = true
@@ -405,5 +405,6 @@ __meta__ = {
 }
 
 [node name="PopupDialog" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [connection signal="value_changed" from="MainPanel/loadingBar" to="." method="_on_loadingBar_value_changed"]

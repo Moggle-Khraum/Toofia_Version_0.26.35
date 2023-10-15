@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fruit.mp3-b9f43c19f1cb032254f2b0b599f2dad4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Fruit.mp3"
+dest_files=[ "res://.import/Fruit.mp3-b9f43c19f1cb032254f2b0b599f2dad4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

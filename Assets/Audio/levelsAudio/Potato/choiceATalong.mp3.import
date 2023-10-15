@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/choiceATalong.mp3-7421652451a8f7b109408aa12a436f99.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/Potato/choiceATalong.mp3"
+dest_files=[ "res://.import/choiceATalong.mp3-7421652451a8f7b109408aa12a436f99.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

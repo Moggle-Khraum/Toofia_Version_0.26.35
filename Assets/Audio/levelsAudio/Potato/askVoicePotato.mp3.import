@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/askVoicePotato.mp3-c8f2fbe8f502e593903ee735709b9fcb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/Potato/askVoicePotato.mp3"
+dest_files=[ "res://.import/askVoicePotato.mp3-c8f2fbe8f502e593903ee735709b9fcb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

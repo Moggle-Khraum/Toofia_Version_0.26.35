@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/patatas.mp3-51d75e77dc2b702562bee923a32afbe5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/Potato/patatas.mp3"
+dest_files=[ "res://.import/patatas.mp3-51d75e77dc2b702562bee923a32afbe5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

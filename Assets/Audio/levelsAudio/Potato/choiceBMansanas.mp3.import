@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/choiceBMansanas.mp3-6f78f186f6931c878ba1549ad381476a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/levelsAudio/Potato/choiceBMansanas.mp3"
+dest_files=[ "res://.import/choiceBMansanas.mp3-6f78f186f6931c878ba1549ad381476a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

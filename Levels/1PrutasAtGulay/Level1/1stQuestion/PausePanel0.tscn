@@ -680,3 +680,8 @@ unique_name_in_owner = true
 [connection signal="pressed" from="bg/box/pausePanel/goMainMenu/home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="bg/box/pausePanel/goTopics/topics" to="." method="_on_topics_pressed"]
 [connection signal="pressed" from="bg/x" to="." method="_on_x_pressed"]
+[connection signal="visibility_changed" from="PrutasAtGulay" to="." method="_on_PrutasAtGulay_visibility_changed"]
+
+[editable path="PrutasAtGulay"]
+[editable path="PrutasAtGulay/bgPanel"]
+[editable path="PrutasAtGulay/fruitTheme"]

@@ -23,6 +23,13 @@ func _on_topics_pressed():
 func _on_x_pressed() -> void:
 	#This will be if th eplayer want to continue the game
 	MenuClickSfxPlayer.play()
-	$'.'.hide()
+	#$'.'.hide()
+	var x_hide = get_tree().change_scene("res://Levels/1PrutasAtGulay/PrutasAtGulayLevel.tscn")
+	$'%PrutasAtGulay'.show()
 	print("Hides the Popup")
 	
+
+
+func _on_PrutasAtGulay_visibility_changed() -> void:
+	$'PrutasAtGulay/fruitTheme'.play()
+	pass # Replace with function body.
